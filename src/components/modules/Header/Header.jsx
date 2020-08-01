@@ -1,15 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import * as S from './Header.styled';
 import dataLink from './_mock-links';
 import { Avatar } from '../../elements';
+import { Menu } from '@styled-icons/feather/Menu'
 
-function Header() {
+const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <S.Header>
       <S.ListLinks>
-        <S.ListItem>
           <Avatar />
-        </S.ListItem>
+          <S.MenuButton onClick={()=> setIsOpen(!isOpen)}><Menu/></S.MenuButton>
         {
           dataLink.map((link, index) => {
             let iKey = index * 1024;
@@ -24,6 +26,20 @@ function Header() {
         }
       </S.ListLinks>
 
+      <S.ListMobile isOpen={isOpen}>
+        {
+          dataLink.map((link, index) => {
+            let iKey = index * 1024;
+            return (
+              <S.ListItem key={iKey} isOpen={isOpen} onClick={() => setIsOpen(!isOpen)}>
+                <S.LinkItem to={link.url} activeClassName="active">
+                  {link.label}
+                </S.LinkItem>
+              </S.ListItem>
+            )
+          })
+        }
+      </S.ListMobile>
     </S.Header>
   )
 }

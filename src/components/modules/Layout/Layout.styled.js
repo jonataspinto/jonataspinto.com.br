@@ -13,6 +13,6 @@ export const Container = styled.div`
   align-items: center;
   padding: 10px 100px 138px;
   @media (max-width: 768px) {
-    padding: 0 18px;
+    padding: 0 0 100px;
   }
 `;
