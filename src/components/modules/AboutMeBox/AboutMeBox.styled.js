@@ -1,15 +1,19 @@
 import styled from "styled-components";
+import media from "styled-media-query";
 
 export const Wrapper = styled.div`
-
+  ${media.lessThan("medium")`
+    padding: 0 18px;
+  `}
 `;
 
 export const Content = styled.div`
   width: 100%;
-  max-width: 518px;
+  max-width: 597px;
+  line-height: 35px;
   @media (min-width: 768px) {
     font-size: 20px;
-    padding: 10px 35px;
+    padding: 10px 39px;
     border-right: 2px solid #26647A;
     border-bottom: 2px solid #26647A;
   }
