@@ -7,10 +7,10 @@ const Links = [
     label: "Projetos",
     url: "/projetos/"
   },
-  {
-    label: "Contato",
-    url: "/contato/"
-  }
+  // {
+  //   label: "Contato",
+  //   url: "/contato/"
+  // }
 ]
 
 export default Links
