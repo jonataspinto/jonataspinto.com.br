@@ -24,7 +24,7 @@ const GlobalStyles = createGlobalStyle`
 
   a {
     text-decoration: none;
-    transition: color 0.5s;
+    transition: color 0.2s;
   }
 
    /* width */
