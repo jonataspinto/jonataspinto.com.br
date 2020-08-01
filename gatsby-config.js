@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Jonatas Pinto`,
+    description: `Web site de jonatas pinto`,
+    author: `@jonataspinto`,
     aboutAuthor: `
     Olá<br>
-    Me chamo Jônatas Pinto Ferreira, sou formado em Análise e desenvolvimento de sistema e estou na área de Tecnologia da Informação desde 2014.<br><br>
+    Me chamo Jonatas Pinto Ferreira, sou formado em Análise e desenvolvimento de sistema e estou na área de Tecnologia da Informação desde 2014.<br><br>
 
     Participo como instrutor do Estartando Devs- projeto social voltado para a área de desenvolvimento web e design UI/UX, que tem como intuito transformar a realidade dos jovens de Pedra de Guaratiba. Atualmente o projeto vem sendo realizado de modo virtual, o que tem possibilitado alcançar jovens de diferentes lugares, não só do Rio de Janeiro, mas do Brasil.<br><br>
 
@@ -30,7 +30,7 @@ module.exports = {
       options: {
         name: `gatsby-starter-default`,
         short_name: `starter`,
-        start_url: `/`,
+        start_url: `/sobre-mim/`,
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
