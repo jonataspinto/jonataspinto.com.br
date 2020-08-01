@@ -3,7 +3,7 @@ import { Layout } from "../components/modules"
 
 const IndexPage = () => (
   <Layout>
-    {window.location = '/sobre-mim'}
+    { (window !== 'undefined') && (window.location = '/sobre-mim')}
   </Layout>
 )
 
