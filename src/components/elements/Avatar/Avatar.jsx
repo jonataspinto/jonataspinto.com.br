@@ -6,16 +6,16 @@ function Avatar() {
   const {
     placeholderImage: {
       childImageSharp: {
-        fixed
+        fluid
       }
     }
-} = useStaticQuery(
+  } = useStaticQuery(
     graphql`
       query {
-        placeholderImage: file(relativePath: { eq: "profile.jpeg" }) {
+        placeholderImage: file(relativePath: { eq: "profile.jpg" }) {
           childImageSharp {
-            fixed(width: 80, height: 80) {
-              ...GatsbyImageSharpFixed
+            fluid(maxWidth: 100, quality: 100) {
+              ...GatsbyImageSharpFluid
             }
           }
         }
@@ -23,7 +23,7 @@ function Avatar() {
     `
   )
   return (
-    <S.Avatar fixed={fixed} />
+    <S.Avatar fluid={fluid} />
 
   )
 }
