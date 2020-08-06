@@ -4,17 +4,21 @@ import { shade } from 'polished'
 import media from "styled-media-query";
 
 export const Header = styled.header`
-  height: 80px;
+  height: 100px;
   width: 100%;
   max-width: 768px;
   margin-bottom: 97px;
   position: relative;
   background-color: #26647A;
+  z-index: 3;
   ${media.lessThan("medium")`
+    height: 100px;
     position: sticky;
     top: 0;
-    z-index: 2;
     margin-bottom: 40px;
+  `}
+  ${media.lessThan("small")`
+    height: 80px;
   `}
 `;
 
@@ -70,7 +74,7 @@ export const ListMobile = styled.ul`
 `;
 
 export const ListItem = styled.li`
-  ${media.lessThan("small")`
+  ${media.lessThan("medium")`
     opacity: ${(props) => props.isOpen ? '1' : '0'};
     transition: opacity .1s;
   `}

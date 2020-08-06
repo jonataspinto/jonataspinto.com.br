@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {Settings} from "@styled-icons/feather/Settings";
+import { Settings } from "@styled-icons/feather/Settings";
 import media from "styled-media-query";
 
 export const BoxContainer = styled.div`

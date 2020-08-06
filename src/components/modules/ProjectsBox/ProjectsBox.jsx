@@ -1,13 +1,13 @@
 import React from 'react';
 import * as S from './ProjectsBox.styled';
-import projects from './_mock-projects';
+import { ProjectsMock } from '../../../__mock__';
 import { ProjectImage } from '../../elements';
 
 function ProjectsBox() {
   return (
     <S.BoxContainer>
       {
-        projects.map((project) => (
+        ProjectsMock.map((project) => (
         <S.ProjectsBoxWrapper key={project.id}>
           <S.ProjectBox
 
