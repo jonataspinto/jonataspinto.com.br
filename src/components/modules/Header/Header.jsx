@@ -17,7 +17,7 @@ const Header = () => {
           dataLink.map((link, index) => {
             let iKey = index * 1024;
             return (
-              <S.ListItem key={iKey} current={(window.location.pathname === link.url) ? true : false}>
+              <S.ListItem key={iKey} current={(typeof window !== 'undefined') && (window.location.pathname === link.url) ? true : false}>
                 <S.LinkItem
                   to={link.url}
                   activeClassName="active"
