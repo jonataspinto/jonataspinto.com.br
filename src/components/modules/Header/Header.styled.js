@@ -23,8 +23,9 @@ export const Header = styled.header`
 `;
 
 export const MenuButton = styled.button`
-  width: 40px;
+  width: 30px;
   background-color: transparent;
+  color: #dbdbdb;
   border: none;
   outline: none;
   ${media.greaterThan("medium")`

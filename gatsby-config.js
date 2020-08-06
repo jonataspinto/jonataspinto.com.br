@@ -4,8 +4,7 @@ module.exports = {
     description: `Web site de jonatas pinto`,
     author: `@jonataspinto`,
     aboutAuthor: `
-    Olá<br>
-    Me chamo Jonatas Pinto Ferreira, sou formado em Análise e desenvolvimento de sistema e estou na área de Tecnologia da Informação desde 2014.<br><br>
+    Olá, me chamo Jonatas Pinto Ferreira, sou formado em Análise e desenvolvimento de sistema e estou na área de Tecnologia da Informação desde 2014.<br><br>
 
     Participo como instrutor do Estartando Devs- projeto social voltado para a área de desenvolvimento web e design UI/UX, que tem como intuito transformar a realidade dos jovens de Pedra de Guaratiba. Atualmente o projeto vem sendo realizado de modo virtual, o que tem possibilitado alcançar jovens de diferentes lugares, não só do Rio de Janeiro, mas do Brasil.<br><br>
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import * as S from './Header.styled';
 import dataLink from './_mock-links';
 import { Avatar } from '../../elements';
@@ -6,12 +6,11 @@ import { Menu } from '@styled-icons/feather/Menu'
 import { useComponentVisible } from '../../../utils'
 
 const Header = () => {
-  const [isOpen, setp] = useState(false);
   const { ref, isComponentVisible, setIsComponentVisible } = useComponentVisible(false);
 
 
   return (
-    <S.Header>
+    <S.Header ref={ref}>
       <S.ListLinks>
           <Avatar />
           <S.MenuButton onClick={()=> setIsComponentVisible(!isComponentVisible)}><Menu/></S.MenuButton>
@@ -29,7 +28,7 @@ const Header = () => {
         }
       </S.ListLinks>
 
-      <S.ListMobile ref={ref} isOpen={isComponentVisible}>
+      <S.ListMobile isOpen={isComponentVisible}>
         {
           dataLink.map((link, index) => {
             let iKey = index * 1024;

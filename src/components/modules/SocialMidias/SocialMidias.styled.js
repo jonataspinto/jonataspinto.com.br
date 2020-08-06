@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import media from "styled-media-query";
+import { shade, tint } from "polished";
 
 export const SocialMidiasBox = styled.div`
   width: 40px;
@@ -16,7 +17,7 @@ export const SocialMidiasBox = styled.div`
     bottom: 0;
     right: auto;
     left: auto;
-    background-color: black;
+    background-color: ${tint(0.1, '#000')};
   `}
 `;
 
@@ -28,6 +29,9 @@ export const LinkToSocialPage = styled.a`
   padding: 5px;
   max-width: 50px;
   margin: 0 auto;
+  ${media.lessThan("medium")`
+    max-width: 35px;
+  `}
 
   &:before {
     content: '';

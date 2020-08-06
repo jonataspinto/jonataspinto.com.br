@@ -22,13 +22,14 @@ export const Content = styled.div`
 export const Title = styled.h2`
   font-family: Ubuntu;
   font-weight: normal;
+  margin-bottom: 23px;
+  border-bottom: 2px solid #26647A;
+  width: max-content;
   @media (min-width: 768px) {
-    width: max-content;
     font-size: 25px;
     line-height: 29px;
     margin-left: 35px;
     margin-bottom: 23px;
     padding: 0 20px 9px 0;
-    border-bottom: 2px solid #26647A;
   }
 `;
