@@ -1,10 +1,8 @@
 import styled from "styled-components";
+import media from "styled-media-query";
 
 export const Container = styled.div`
-  background-image: url(${(props) => props.imgHeader}), url(${(props) => props.imgBottom});
-  background-position: top, bottom;
-  background-repeat: no-repeat, no-repeat;
-  background-size: auto;
+
   height: 100%;
   min-height: 100vh;
   position: relative;
@@ -12,7 +10,13 @@ export const Container = styled.div`
   flex-direction:column;
   align-items: center;
   padding: 10px 100px 138px;
-  @media (max-width: 768px) {
+  ${media.lessThan("medium")`
     padding: 0 0 100px;
-  }
+  `}
+  ${media.greaterThan("medium")`
+    background-image: url(${(props) => props.imgHeader}), url(${(props) => props.imgBottom});
+    background-position: top, bottom;
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto;
+  `}
 `;

@@ -4,11 +4,18 @@ import { shade } from 'polished'
 import media from "styled-media-query";
 
 export const Header = styled.header`
-  height: 70px;
+  height: 80px;
   width: 100%;
   max-width: 768px;
   margin-bottom: 97px;
   position: relative;
+  background-color: #26647A;
+  ${media.lessThan("medium")`
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    margin-bottom: 40px;
+  `}
 `;
 
 export const MenuButton = styled.button`
@@ -46,7 +53,7 @@ export const ListMobile = styled.ul`
   justify-content: space-evenly;
   width: 100%;
   position: absolute;
-  height: 100px;
+  height: 80px;
   background-color: #26647A;
   z-index: 1;
   transition: .2s;
@@ -55,7 +62,7 @@ export const ListMobile = styled.ul`
     height: 80px;
   `}
   ${media.lessThan("medium")`
-    top: ${(props) => props.isOpen ? '100px' : '0'};
+    top: ${(props) => props.isOpen ? '80px' : '0'};
   `}
   ${media.greaterThan("medium")`
     display: none;
@@ -68,15 +75,15 @@ export const ListItem = styled.li`
     transition: opacity .1s;
   `}
   .active {
-    color: ${shade(0.8, '#f2f2f2')};
+    color: #f2f2f2;
   }
 `;
 
 export const LinkItem = styled(Link)`
-  color: #f2f2f2;
+  color: ${shade(0.8, '#f2f2f2')};
   font-size: 22px;
   text-transform: uppercase;
   &:hover {
-    color: ${shade(0.8, '#f2f2f2')};
+    color: #f2f2f2;
   }
 `;
