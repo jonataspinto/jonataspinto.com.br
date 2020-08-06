@@ -4,7 +4,6 @@ import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/modules/Layout/Layout.jsx"
 import SEO from "../components/seo"
 import { AboutMeBox } from "../components/modules"
-import { UserArt } from "../components/elements"
 
 const AboutMePage = () => {
   const {
@@ -24,7 +23,6 @@ const AboutMePage = () => {
   return (
     <Layout>
       <SEO title="Sobre mim" />
-      <UserArt />
       <AboutMeBox data={aboutAuthor} />
     </Layout>
   )
