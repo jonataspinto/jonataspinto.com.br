@@ -12,7 +12,7 @@ const data = [
     title: "YouPluv",
     key: "youpluv",
     imgSrc: "",
-    stack: ["React"],
+    stack: ["React", "Redux", "Styled-Components"],
     link: "https://estartando-devs.github.io/youpluv-web/"
   },
   {
@@ -20,17 +20,17 @@ const data = [
     title: "Conforto Animal",
     key: "confortoanimal",
     imgSrc: "",
-    stack: ["Html", "CSS"],
+    stack: ["React", "Redux", "Styled-Components", "Firebase"],
     link: "https://estartando-devs.github.io/conforto-animal/"
   },
-  {
-    id: 4,
-    title: "Elio Winter",
-    key: "eliowinter",
-    imgSrc: "",
-    stack: ["Html", "CSS"],
-    link: "http://ew.betabit.com.br/"
-  }
+  // {
+  //   id: 4,
+  //   title: "Elio Winter",
+  //   key: "eliowinter",
+  //   imgSrc: "",
+  //   stack: ["Html", "CSS"],
+  //   link: "http://ew.betabit.com.br/"
+  // }
 ]
 
 export default data;
