@@ -8,7 +8,6 @@ import { useComponentVisible } from '../../../utils'
 const Header = () => {
   const { ref, isComponentVisible, setIsComponentVisible } = useComponentVisible(false);
 
-
   return (
     <S.Header ref={ref}>
       <S.ListLinks>
@@ -18,8 +17,11 @@ const Header = () => {
           dataLink.map((link, index) => {
             let iKey = index * 1024;
             return (
-              <S.ListItem key={iKey}>
-                <S.LinkItem to={link.url} activeClassName="active">
+              <S.ListItem key={iKey} current={(window.location.pathname === link.url) ? true : false}>
+                <S.LinkItem
+                  to={link.url}
+                  activeClassName="active"
+                >
                   {link.label}
                 </S.LinkItem>
               </S.ListItem>

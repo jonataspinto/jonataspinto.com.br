@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import media from "styled-media-query";
-import { shade, tint } from "polished";
+import { tint } from "polished";
 
 export const SocialMidiasBox = styled.div`
   width: 40px;

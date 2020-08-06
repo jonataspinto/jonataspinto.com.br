@@ -7,15 +7,14 @@ export const Header = styled.header`
   height: 100px;
   width: 100%;
   max-width: 768px;
-  margin-bottom: 97px;
+  margin-bottom: 40px;
   position: relative;
-  background-color: #26647A;
   z-index: 3;
   ${media.lessThan("medium")`
     height: 100px;
     position: sticky;
     top: 0;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
   `}
   ${media.lessThan("small")`
     height: 80px;
@@ -41,8 +40,10 @@ export const ListLinks = styled.ul`
   margin: 0;
   position: relative;
   z-index: 2;
+
   ${media.lessThan("medium")`
     justify-content: space-between;
+    background-image: linear-gradient(#26647A, #000);
     padding: 10px ;
   `}
   li{
@@ -58,16 +59,16 @@ export const ListMobile = styled.ul`
   justify-content: space-evenly;
   width: 100%;
   position: absolute;
-  height: 80px;
-  background-color: #26647A;
+  height: 40px;
+  background-color: #000;
   z-index: 1;
   transition: .2s;
+  ${media.lessThan("medium")`
+    top: ${(props) => props.isOpen ? '100px' : '40px'};
+  `}
   ${media.lessThan("small")`
     top: ${(props) => props.isOpen ? '80px' : '40px'};
     height: 40px;
-  `}
-  ${media.lessThan("medium")`
-    top: ${(props) => props.isOpen ? '80px' : '40px'};
   `}
   ${media.greaterThan("medium")`
     display: none;
@@ -82,6 +83,9 @@ export const ListItem = styled.li`
   .active {
     color: #f2f2f2;
   }
+    color: ${(props) => props.current? '#f2f2f2' : '#26647A'};
+  ${media.lessThan("medium")`
+  `}
 `;
 
 export const LinkItem = styled(Link)`
@@ -93,5 +97,6 @@ export const LinkItem = styled(Link)`
   }
   ${media.lessThan("medium")`
     font-size: 18px;
+    color: #26647A;
   `}
 `;
