@@ -4,6 +4,7 @@ import bottom from "../../../images/bottom.svg";
 import * as S from './Layout.styled';
 import GlobalStyles from '../../../styles/global';
 import Header from '../Header/Header';
+import { SocialMidias } from '../SocialMidias';
 
 function Layout({ children }) {
   return (
@@ -11,6 +12,7 @@ function Layout({ children }) {
       <GlobalStyles />
       <Header />
       {children}
+      <SocialMidias />
     </S.Container>
   )
 }
