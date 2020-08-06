@@ -73,6 +73,6 @@ export const ToolsIcon = styled(Settings)`
 export const StacksName = styled.span`
   color: #BDBDBD;
   ${media.lessThan("small")`
-    font-size: 18px
+    font-size: 14px
   `}
 `;

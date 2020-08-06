@@ -62,11 +62,11 @@ export const ListMobile = styled.ul`
   z-index: 1;
   transition: .2s;
   ${media.lessThan("small")`
-    top: ${(props) => props.isOpen ? '80px' : '0'};
-    height: 80px;
+    top: ${(props) => props.isOpen ? '80px' : '40px'};
+    height: 40px;
   `}
   ${media.lessThan("medium")`
-    top: ${(props) => props.isOpen ? '80px' : '0'};
+    top: ${(props) => props.isOpen ? '80px' : '40px'};
   `}
   ${media.greaterThan("medium")`
     display: none;
@@ -90,4 +90,7 @@ export const LinkItem = styled(Link)`
   &:hover {
     color: #f2f2f2;
   }
+  ${media.lessThan("medium")`
+    font-size: 18px;
+  `}
 `;

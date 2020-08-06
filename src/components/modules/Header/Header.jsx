@@ -3,15 +3,18 @@ import * as S from './Header.styled';
 import dataLink from './_mock-links';
 import { Avatar } from '../../elements';
 import { Menu } from '@styled-icons/feather/Menu'
+import { useComponentVisible } from '../../../utils'
 
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setp] = useState(false);
+  const { ref, isComponentVisible, setIsComponentVisible } = useComponentVisible(false);
+
 
   return (
     <S.Header>
       <S.ListLinks>
           <Avatar />
-          <S.MenuButton onClick={()=> setIsOpen(!isOpen)}><Menu/></S.MenuButton>
+          <S.MenuButton onClick={()=> setIsComponentVisible(!isComponentVisible)}><Menu/></S.MenuButton>
         {
           dataLink.map((link, index) => {
             let iKey = index * 1024;
@@ -26,12 +29,12 @@ const Header = () => {
         }
       </S.ListLinks>
 
-      <S.ListMobile isOpen={isOpen}>
+      <S.ListMobile ref={ref} isOpen={isComponentVisible}>
         {
           dataLink.map((link, index) => {
             let iKey = index * 1024;
             return (
-              <S.ListItem key={iKey} isOpen={isOpen} onClick={() => setIsOpen(!isOpen)}>
+              <S.ListItem key={iKey} isOpen={isComponentVisible} onClick={() => setIsComponentVisible(!isComponentVisible)}>
                 <S.LinkItem to={link.url} activeClassName="active">
                   {link.label}
                 </S.LinkItem>
