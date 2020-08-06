@@ -23,8 +23,13 @@ function Avatar() {
     `
   )
   return (
-    <S.Avatar fluid={fluid} />
-
+    <S.AvatarWrapper>
+      <S.Avatar fluid={fluid} />
+      <S.Description>
+        <h2>Jonatas Pinto</h2>
+        <p>Desenvolvedor Front-end | B2W digital</p>
+      </S.Description>
+    </S.AvatarWrapper>
   )
 }
 
