@@ -7,22 +7,28 @@ function ProjectsBox() {
   return (
     <S.BoxContainer>
       {
-        ProjectsMock.map((project) => (
-        <S.ProjectsBoxWrapper key={project.id}>
+        ProjectsMock.map(({
+          id,
+          title,
+          key,
+          link,
+          stack,
+        }) => (
+        <S.ProjectsBoxWrapper key={id}>
           <S.ProjectBox
-
-            href={project.link}
+            aria-label={`Ver projeto ${title}`}
+            href={link}
             target="_blank"
             rel="noopener noreferrer"
           >
-            <ProjectImage name={project.key} />
+            <ProjectImage name={key} />
             <S.ProjectBoxDescription>
-              {project.title}
+              {title}
               <S.BoxStacks>
                 <S.ToolsIcon />
                 <S.StacksName>
-                  {project.stack.map((stk, index) => (
-                    (index === project.stack.length -1 ) ? stk : `${stk}, `
+                  {stack.map((stk, index) => (
+                    (index === stack.length -1 ) ? stk : `${stk}, `
                   ))}
                 </S.StacksName>
               </S.BoxStacks>
