@@ -11,7 +11,8 @@ module.exports = {
     Quando não estou trabalhando curto aprender novas ferramentas de desenvolvimento, além de jogos de raciocínio lógico, cubo mágicos, ouvir músicas e correr.<br><br>
 
     Tenho como paixão o Open Source por permitir a troca de conhecimentos.
-    `
+    `,
+    siteUrl: `https://jonataspinto.com.br`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
