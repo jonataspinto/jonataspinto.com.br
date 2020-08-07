@@ -27,9 +27,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/sobre-mim/`,
+        name: `Jonatas Pinto`,
+        short_name: `Jonatas Pinto`,
+        start_url: `/`,
         background_color: `#26647A`,
         theme_color: `#26647A`,
         display: `minimal-ui`,
@@ -47,9 +47,10 @@ module.exports = {
           }
         ],
       },
-    }
+    },
+    `gatsby-plugin-sitemap`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
   ],
 }
