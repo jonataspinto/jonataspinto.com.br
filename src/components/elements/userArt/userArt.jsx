@@ -6,7 +6,7 @@ function UserArt() {
   const data = useStaticQuery(
     graphql`
       query {
-        placeholderImage: file(relativePath: { eq: "group28.png" }) {
+        placeholderImage: file(relativePath: { eq: "art-user.png" }) {
           childImageSharp {
             fluid(maxWidth: 200) {
               ...GatsbyImageSharpFluid

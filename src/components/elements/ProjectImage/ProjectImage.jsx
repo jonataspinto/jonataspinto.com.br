@@ -1,6 +1,5 @@
 import React from 'react';
 import * as S from './ProjectImage.styled.js';
-// import Images from './images';
 import { useStaticQuery, graphql } from 'gatsby';
 
 const ProjectImage = ({ name }) => {
@@ -35,14 +34,6 @@ const ProjectImage = ({ name }) => {
             }
           }
         }
-        placeholderImage: file(relativePath: { eq: "logo-devs.png" }) {
-          childImageSharp {
-            fluid(maxWidth: 164, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-
       }
     `
   )
