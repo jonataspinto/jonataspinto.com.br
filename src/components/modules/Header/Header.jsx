@@ -12,19 +12,24 @@ const Header = () => {
     <S.Header ref={ref}>
       <S.ListLinks>
           <Avatar />
-          <S.MenuButton onClick={()=> setIsComponentVisible(!isComponentVisible)}><Menu/></S.MenuButton>
+          <S.MenuButton
+            onClick={()=> setIsComponentVisible(!isComponentVisible)}
+            arial-label="botão menu"
+          >
+            <Menu/>
+          </S.MenuButton>
         {
           dataLink.map((link, index) => {
             let iKey = index * 1024;
             return (
-              <S.ListItem key={iKey} current={(typeof window !== 'undefined') && (window.location.pathname === link.url) ? true : false}>
+              <S.ListLinksItem key={iKey} current={(typeof window !== 'undefined') && (window.location.pathname === link.url) ? true : false}>
                 <S.LinkItem
                   to={link.url}
                   activeClassName="active"
                 >
                   {link.label}
                 </S.LinkItem>
-              </S.ListItem>
+              </S.ListLinksItem>
             )
           })
         }

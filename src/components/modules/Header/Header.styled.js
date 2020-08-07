@@ -32,7 +32,7 @@ export const MenuButton = styled.button`
   `}
 `;
 
-export const ListLinks = styled.ul`
+export const ListLinks = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-evenly;
@@ -51,6 +51,16 @@ export const ListLinks = styled.ul`
       display: none;
     `}
   }
+`;
+
+export const ListLinksItem = styled.div`
+  color: ${(props) => props.current? '#f2f2f2' : '#26647A'};
+  .active {
+    color: #f2f2f2;
+  }
+  ${media.lessThan("medium")`
+    display: none;
+  `}
 `;
 
 export const ListMobile = styled.ul`
