@@ -11,13 +11,13 @@ const Header = () => {
   return (
     <S.Header ref={ref}>
       <S.ListLinks>
-          <Avatar />
-          <S.MenuButton
-            onClick={()=> setIsComponentVisible(!isComponentVisible)}
-            arial-label="botão menu"
-          >
-            <Menu/>
-          </S.MenuButton>
+        <Avatar />
+        <S.MenuButton
+          onClick={()=> setIsComponentVisible(!isComponentVisible)}
+          arial-label="botao menu"
+        >
+          <Menu/>
+        </S.MenuButton>
         {
           dataLink.map((link, index) => {
             let iKey = index * 1024;
