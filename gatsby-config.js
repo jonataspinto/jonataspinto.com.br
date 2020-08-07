@@ -30,7 +30,7 @@ module.exports = {
       options: {
         name: `Jonatas Pinto`,
         short_name: `Jonatas Pinto`,
-        start_url: `/`,
+        start_url: `/sobre-mim/`,
         background_color: `#26647A`,
         theme_color: `#26647A`,
         display: `minimal-ui`,
