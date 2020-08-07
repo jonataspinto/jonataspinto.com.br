@@ -4,13 +4,7 @@ module.exports = {
     description: `Web site de jonatas pinto`,
     author: `@jonataspinto`,
     aboutAuthor: `
-    Olá, me chamo Jonatas Pinto Ferreira, sou formado em Análise e desenvolvimento de sistema e estou na área de Tecnologia da Informação desde 2014.<br><br>
-
-    Participo como instrutor do Estartando Devs- projeto social voltado para a área de desenvolvimento web e design UI/UX, que tem como intuito transformar a realidade dos jovens de Pedra de Guaratiba. Atualmente o projeto vem sendo realizado de modo virtual, o que tem possibilitado alcançar jovens de diferentes lugares, não só do Rio de Janeiro, mas do Brasil.<br><br>
-
-    Quando não estou trabalhando curto aprender novas ferramentas de desenvolvimento, além de jogos de raciocínio lógico, cubo mágicos, ouvir músicas e correr.<br><br>
-
-    Tenho como paixão o Open Source por permitir a troca de conhecimentos.
+    Olá, me chamo Jonatas Pinto Ferreira, sou do Rio de Janeiro e sou Desevolvedor Front-end. Tenho atuado na área de Tecnologia da Informação desde 2014(inicialmente com manutenção de equipamentos e suporte técnico) e sou formado em Análise e Desenvolvimento de Sistemas pela <a href="https://www.unopar.com.br/" target="_blank" rel="noopener noreferrer" aria-label="UNOPAR">UNOPAR</a>. Participo como instrutor do projeto social <a href="https://estartandodevs.com.br/" target="_blank" rel="noopener noreferrer" aria-label="estartando-devs">Estartando Devs</a> onde possibilitamos que jovens possam conhecer e iniciar o aprendizado nas areas de Desenvolvimento Web e Design UI/UX, Atualmente o projeto vem sendo realizado de modo virtual, o que tem possibilitado alcançar jovens de diferentes lugares, não só do Rio de Janeiro, mas do Brasil.
     `,
     siteUrl: `https://jonataspinto.com.br`
   },
@@ -30,7 +24,7 @@ module.exports = {
       options: {
         name: `Jonatas Pinto`,
         short_name: `Jonatas Pinto`,
-        start_url: `/sobre-mim/`,
+        start_url: `/sobre-sobre-mim/mim/`,
         background_color: `#26647A`,
         theme_color: `#26647A`,
         display: `minimal-ui`,

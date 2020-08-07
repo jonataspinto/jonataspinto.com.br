@@ -11,6 +11,12 @@ export const Content = styled.div`
   width: 100%;
   max-width: 597px;
   line-height: 35px;
+  text-align: justify;
+  a {
+    color: #26647A;
+    border-bottom: 2px dashed #26647A;
+    padding-bottom: 4px;
+  }
   @media (min-width: 768px) {
     font-size: 20px;
     padding: 10px 39px;
