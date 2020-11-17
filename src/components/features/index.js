@@ -1,1 +1,1 @@
-export { default as BlogPostTemplate } from './templates/blogPostTemplate'
+export { default as BlogPostTemplate } from './templates/BlogPostTemplate'
