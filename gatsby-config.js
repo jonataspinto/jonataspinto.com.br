@@ -12,6 +12,14 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Ubuntu']
+        }
+      }
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
@@ -46,17 +54,6 @@ module.exports = {
         theme_color: `#26647A`,
         display: `minimal-ui`,
         icon: `src/images/profile-peq.png`, // This path is relative to the root of the site.
-      },
-    },
-    {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fonts: [
-          {
-            family: `Ubuntu`,
-            variants: [`400`, `700`]
-          }
-        ],
       },
     },
     `gatsby-plugin-sitemap`,
