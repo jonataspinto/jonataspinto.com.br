@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Link } from "gatsby";
-import { shade } from 'polished'
+import { lighten } from 'polished'
 import media from "styled-media-query";
 
 export const Header = styled.header`
@@ -95,7 +95,7 @@ export const ListItem = styled.li`
     transition: opacity .1s;
   `}
   .active {
-    color: #f2f2f2;
+    color: ${lighten(0.3, '#26647A')};
   }
     color: ${(props) => props.current? '#f2f2f2' : '#26647A'};
   ${media.lessThan("medium")`
@@ -103,11 +103,11 @@ export const ListItem = styled.li`
 `;
 
 export const LinkItem = styled(Link)`
-  color: ${shade(0.8, '#f2f2f2')};
-  font-size: 22px;
+  color: #f2f2f2;
+  font-size: 1.3rem;
   text-transform: uppercase;
   &:hover {
-    color: #f2f2f2;
+    color: ${lighten(0.3, '#26647A')};
   }
   ${media.lessThan("medium")`
     font-size: 18px;
