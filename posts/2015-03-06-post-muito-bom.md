@@ -11,8 +11,15 @@ background: "#7AAB13"
 Proin suscipit luctus orci placerat fringilla. Donec hendrerit laoreet risus eget adipiscing. Suspendisse in urna ligula, a volutpat mauris. Sed enim mi, [adipiscing](http://google.com) eu pulvinar vel, sodales vitae dui. :thumbsup: :smile: :sparkler:
 
 ```javascript
-a=3
-puts a
+  const get = (url)=>{
+    return fetch(url)
+    .then(res=> res.json()).then(res => {
+        contentReq(res)
+    })
+    .catch(error=>
+        console.log('Error:', error)
+    )
+}
 ```
 
 ## Fusce a metus eu

@@ -8,21 +8,21 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     const slug = createFilePath({
       node,
       getNode,
-      basePath: "blog",
+      basePath: `blog`,
     })
 
     createNodeField({
       node,
-      name: "slug",
-      value: `blog/${slug.slice(12)}`,
+      name: `slug`,
+      value: `/blog/${slug.slice(12)}`,
     })
   }
 }
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
-  const BlogPost = path.resolve('./src/components/features/templates/BlogPostTemplate.js');
-  const BlogList = path.resolve('./src/components/features/templates/BlogListTemplate.js');
+  const BlogPost = path.resolve('./src/components/features/templates/BlogPostTemplate.jsx');
+  const BlogList = path.resolve('./src/components/features/templates/BlogListTemplate.jsx');
 
   return graphql(`
     {
@@ -68,7 +68,7 @@ exports.createPages = ({ graphql, actions }) => {
 
     Array.from({ length: numPages }).forEach((_, index) => {
       createPage({
-        path: index === 0 ? '/' : `/blog/page/${index + 1}`,
+        path: index === 0 ? '/blog/' : `/blog/page/${index + 1}`,
         component: BlogList,
         context: {
           limit: postsPerPage,

@@ -6,15 +6,19 @@ import media from "styled-media-query";
 export const Header = styled.header`
   height: 100px;
   width: 100%;
-  max-width: 768px;
+  max-width: 100%;
   margin-bottom: 40px;
   position: relative;
   z-index: 3;
+  padding: 10px 180px ;
+  background-image: linear-gradient(#26647A, #000);
+
   ${media.lessThan("medium")`
     height: 100px;
     position: sticky;
     top: 0;
     margin-bottom: 10px;
+    padding: 0px ;
   `}
   ${media.lessThan("small")`
     height: 80px;
@@ -42,9 +46,9 @@ export const ListLinks = styled.div`
   z-index: 2;
 
   ${media.lessThan("medium")`
-    justify-content: space-between;
     background-image: linear-gradient(#26647A, #000);
-    padding: 10px ;
+    justify-content: space-between;
+    padding: 10px;
   `}
   li{
     ${media.lessThan("medium")`

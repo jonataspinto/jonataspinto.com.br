@@ -8,16 +8,16 @@ export const Container = styled.div`
   display: flex;
   flex-direction:column;
   align-items: center;
-  padding: 10px 100px 138px;
+  padding: 0px 0px 138px;
   ${media.lessThan("medium")`
     padding: 0 0 100px;
   `}
-  ${media.greaterThan("medium")`
+  /* ${media.greaterThan("medium")`
     background-image: url(${(props) => props.imgHeader}), url(${(props) => props.imgBottom});
     background-position: top, bottom;
     background-repeat: no-repeat, no-repeat;
     background-size: auto;
-  `}
+  `} */
 `;
 
 export const PostItemContainer = styled.div`
@@ -26,4 +26,13 @@ export const PostItemContainer = styled.div`
   position: relative;
   flex-direction: column;
   justify-content: space-evenly;
+  padding: 0 160px;
+  ${media.lessThan("medium")`
+    padding: 0 16px;
+  `}
+  ${media.lessThan("large")`
+    padding: 0 80px;
+  `}
 `;
+
+

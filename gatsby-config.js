@@ -21,14 +21,16 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `posts`,
+        name: `blog`,
         path: `${__dirname}/posts`,
       },
     },
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        plugins: [],
+        plugins: [
+          `gatsby-remark-prismjs`
+        ],
       },
     },
     `gatsby-transformer-sharp`,
