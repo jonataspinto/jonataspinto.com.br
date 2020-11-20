@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import ReactDisqusComments from 'react-disqus-comments'
+import { Disqus } from 'gatsby-plugin-disqus'
 import * as S from './CommentsStyled';
 
 function Comments({ url, title }) {
@@ -9,11 +9,12 @@ function Comments({ url, title }) {
   return (
     <S.CommentsWrapper>
       <S.CommentsTitle>Comentários</S.CommentsTitle>
-      <ReactDisqusComments
-        shortname="jontaspinto"
-        identifier={completeUrl}
-        title={title}
-        url={completeUrl}
+      <Disqus
+        config={{
+          identifier: completeUrl,
+          title: title,
+          url: completeUrl
+        }}        
       />      
     </S.CommentsWrapper>
   )
