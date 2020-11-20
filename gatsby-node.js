@@ -21,8 +21,8 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
-  const BlogPost = path.resolve('./src/components/features/templates/BlogPostTemplate.jsx');
-  const BlogList = path.resolve('./src/components/features/templates/BlogListTemplate.jsx');
+  const BlogPost = path.resolve('./src/components/modules/templates/BlogPostTemplate.jsx');
+  const BlogList = path.resolve('./src/components/modules/templates/BlogListTemplate.jsx');
 
   return graphql(`
     {
@@ -47,23 +47,41 @@ exports.createPages = ({ graphql, actions }) => {
             timeToRead,
             id
           }
+          next {
+            frontmatter {
+              title
+            }
+            fields {
+              slug
+            }
+          }
+          previous {
+            fields {
+              slug
+            }
+            frontmatter {
+              title
+            }
+          }
         }
       }
     }
   `).then(({ data }) => {
     const posts = data.allMarkdownRemark.edges;
 
-    posts.forEach(({ node }) => {
+    posts.forEach(({ node, next, previous }) => {
       createPage({
         path: node.fields.slug,
         component: BlogPost,
         context: {
-          slug: node.fields.slug
+          slug: node.fields.slug,
+          previousPost: next,
+          nextPost: previous
         },
       })
     })
 
-    const postsPerPage = 2;
+    const postsPerPage = 3;
     const numPages = Math.ceil(posts.length / postsPerPage)
 
     Array.from({ length: numPages }).forEach((_, index) => {

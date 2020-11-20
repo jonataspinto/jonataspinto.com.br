@@ -23,6 +23,10 @@ const GlobalStyles = createGlobalStyle`
     --black: #222;
   }
 
+  html {
+    min-height: 100vh;
+  }
+
   #root, html, body {
     height: 100%;
     width: 100%;

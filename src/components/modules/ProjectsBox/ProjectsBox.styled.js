@@ -3,7 +3,6 @@ import { Settings } from "@styled-icons/feather/Settings";
 import media from "styled-media-query";
 
 export const BoxContainer = styled.div`
-  height: 100%;
   display: flex;
   position: relative;
   flex-direction: column;

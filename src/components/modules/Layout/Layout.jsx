@@ -11,7 +11,9 @@ function Layout({ children }) {
     <S.Container imgHeader={image} imgBottom={bottom}>
       <GlobalStyles />
       <Header />
-      {children}
+      <S.MainContent>
+        {children}
+      </S.MainContent>
       <SocialMidias />
     </S.Container>
   )

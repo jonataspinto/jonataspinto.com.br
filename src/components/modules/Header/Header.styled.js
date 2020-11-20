@@ -7,16 +7,15 @@ export const Header = styled.header`
   height: 100px;
   width: 100%;
   max-width: 100%;
-  margin-bottom: 40px;
   position: relative;
-  z-index: 3;
+  z-index: 4;
   padding: 10px 180px ;
   background-image: linear-gradient(#26647A, #000);
 
-  ${media.lessThan("medium")`
-    height: 100px;
     position: sticky;
     top: 0;
+  ${media.lessThan("medium")`
+    height: 100px;
     margin-bottom: 10px;
     padding: 0px ;
   `}

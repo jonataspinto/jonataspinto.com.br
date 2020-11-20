@@ -1,5 +1,6 @@
 import { lighten } from "polished";
 import styled from "styled-components";
+import media from "styled-media-query";
 
 export const PaginationWrapper = styled.div`
   display: grid;
@@ -7,9 +8,12 @@ export const PaginationWrapper = styled.div`
   grid-template-areas:
    "a b c";
   width: 100%;
-  padding: 32px 160px;
+  align-items: center;
+  padding: 32px 64px;
   color: #f2f2f2;
-  width: max-content;
+  ${media.lessThan("medium")`
+    padding: 32px 0px;
+  `}
 
   a {
     color: #f2f2f2;

@@ -23,13 +23,13 @@ export const PostDescription = styled.h2`
 export const PostDate = styled.p`
   font-size: 1.1rem;
   font-weight: 100;
-  /* padding: 0 1.4rem; */
+  padding: 0 1.4rem;
 `
 
 export const MainContent = styled.section`
   margin: auto;
-  max-width: 70rem;
-  padding: 2rem 5rem;
+  /* max-width: 70rem; */
+  /* padding: 2rem 5rem; */
   p,
   h1,
   h2,
@@ -141,8 +141,7 @@ export const MainContent = styled.section`
     }
   }
   .gatsby-highlight {
-    /* padding: 0 1.6rem 1.6rem; */
-    border-radius: 16px;
+    padding: 0 1.6rem 1.6rem;
   }
   .instagram-media {
     margin: 1rem auto !important;
