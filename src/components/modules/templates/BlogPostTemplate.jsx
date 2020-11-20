@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import { Layout } from "../Layout";
-import { RecommendedPosts, SEO } from "../../features";
+import { Comments, RecommendedPosts, SEO } from "../../features";
 
 import * as S from "./PostStyled"
 
@@ -29,6 +29,11 @@ const BlogPostTemplate = ({ data, pageContext }) => {
         next={pageContext.nextPost}
         previous={pageContext.previousPost}
       />
+      {console.log(post.fields.slug)}
+      <Comments
+        url={post.fields.slug}
+        title={post.frontmatter.title}
+      />
     </Layout>
   );
 };
@@ -36,6 +41,9 @@ const BlogPostTemplate = ({ data, pageContext }) => {
 export const query = graphql`
   query Post($slug: String!) {
     markdownRemark(fields: {slug: {eq: $slug}}){
+      fields {
+        slug
+      }
       frontmatter {
         title
         description
