@@ -28,7 +28,7 @@ export const MainContent = styled.div`
   flex-direction: column;
   padding: 0 90px;
   ${media.lessThan("medium")`
-    padding: 32px 32px ;
+    padding: 0px 32px 32px ;
   `}
   ${media.lessThan("small")`
     min-height: calc(100% - 115px);

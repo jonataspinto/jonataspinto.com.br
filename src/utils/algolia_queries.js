@@ -15,6 +15,7 @@ const postsQuery = `{
           date_timestamp: date
           date(locale: "pt-br", formatString: "D MMM, YYYY")
         }
+        timeToRead
         excerpt(pruneLength: 5000)
       }
     }
