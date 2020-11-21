@@ -4,11 +4,9 @@ import * as S from "./RecommendedPostsStyled.js"
 import { ConditionalRenderer } from "../ConditionalRenderer"
 
 function RecommendedPosts({ next, previous }) {
-
-  console.log("next =>", next)
-  console.log("previous =>", previous)
   const hasNext = next && next.fields.slug
   const hasPrevious = previous && previous.fields.slug
+
   return (
     <S.RecommendedPostsWrapper previous={previous}>
       <ConditionalRenderer validator={hasPrevious}>

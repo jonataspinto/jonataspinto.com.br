@@ -21,7 +21,6 @@ const BlogListTemplate = (props) => {
       <SEO title="Blog" />
       {
         postList.map(({ node: { fields, frontmatter, timeToRead, id } }) => {
-          console.log(fields.slug);
           return(
           <PostItem
             key={id}

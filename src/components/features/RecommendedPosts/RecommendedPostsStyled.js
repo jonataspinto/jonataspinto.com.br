@@ -5,7 +5,6 @@ export const RecommendedPostsWrapper = styled.div`
   display: flex;
   width: 100%;
   justify-content: ${(props) => props.previous !== null ? 'space-between' : 'flex-end' }
-  ${(props) => console.log(props.hasNext)}
 `;
 
 export const RecommendedLink = styled(Link)`

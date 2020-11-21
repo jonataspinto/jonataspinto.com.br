@@ -29,7 +29,6 @@ const BlogPostTemplate = ({ data, pageContext }) => {
         next={pageContext.nextPost}
         previous={pageContext.previousPost}
       />
-      {console.log(post.fields.slug)}
       <Comments
         url={post.fields.slug}
         title={post.frontmatter.title}
