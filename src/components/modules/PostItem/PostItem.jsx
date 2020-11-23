@@ -13,6 +13,10 @@ function PostItem({
   return (
     <S.PostItemBoxWrapper>
       <S.PostItemBox
+        cover
+        direction="bottom"
+        bg="#0c0c0c"
+        duration={0.7}
         aria-label={`Ver post ${title}`}
         to={slug}
       >

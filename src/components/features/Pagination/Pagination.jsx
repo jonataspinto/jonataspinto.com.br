@@ -1,5 +1,7 @@
 import React from "react"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink";
+
 import { ConditionalRenderer } from "../ConditionalRenderer"
 import * as S from "./PaginationStyled"
 
@@ -14,17 +16,29 @@ const Pagination = ({
   return (
     <S.PaginationWrapper>
       <ConditionalRenderer validator={!isFirst}>
-        <Link to={`/${prevPage}`}>
+        <AniLink 
+          cover
+          direction="right"
+          bg="#0c0c0c"
+          duration={0.7}
+          to={`/${prevPage}`}
+        >
           ← página anterior
-        </Link>
+        </AniLink>
       </ConditionalRenderer>
 
       <span>{currentPage}/{numPages}</span>
 
       <ConditionalRenderer validator={!isLast}>
-        <Link to={`${nextPage}`}>
+        <AniLink 
+          cover
+          direction="left"
+          bg="#0c0c0c"
+          duration={0.7}
+          to={`${nextPage}`}
+        >
           próxima página →
-        </Link>
+        </AniLink>
       </ConditionalRenderer>
     </S.PaginationWrapper>
   );

@@ -13,6 +13,7 @@ module.exports = {
     siteUrl: `https://jonataspinto.com.br`
   },
   plugins: [
+    `gatsby-plugin-transition-link`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: 'gatsby-plugin-web-font-loader',

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import media from "styled-media-query";
-import { Link } from "gatsby";
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 import { PriceTag } from "@styled-icons/entypo/PriceTag";
 
 export const PostItemBoxWrapper = styled.div`
@@ -8,7 +8,7 @@ export const PostItemBoxWrapper = styled.div`
   width: 100%;
 `;
 
-export const PostItemBox = styled(Link)`
+export const PostItemBox = styled(AniLink)`
   display: flex;
   color: #FCFCFC;
   font-weight: 500;

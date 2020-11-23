@@ -10,7 +10,13 @@ function RecommendedPosts({ next, previous }) {
   return (
     <S.RecommendedPostsWrapper previous={previous}>
       <ConditionalRenderer validator={hasPrevious}>
-        <S.RecommendedLink to={hasPrevious && previous.fields.slug}>
+        <S.RecommendedLink
+          cover
+          direction="right"
+          bg="#0c0c0c"
+          duration={0.7}
+          to={hasPrevious && previous.fields.slug}
+        >
           ←
           <p>
             {hasPrevious && previous.frontmatter.title}
@@ -19,7 +25,15 @@ function RecommendedPosts({ next, previous }) {
       </ConditionalRenderer>
 
       <ConditionalRenderer validator={hasNext}>
-        <S.RecommendedLink to={hasNext && next.fields.slug} className="next" option="next">
+        <S.RecommendedLink
+          cover
+          direction="right"
+          bg="#0c0c0c"
+          duration={0.7}
+          to={hasNext && next.fields.slug} 
+          className="next" 
+          option="next"
+        >
           <p>
             {hasNext && next.frontmatter.title}
           </p>

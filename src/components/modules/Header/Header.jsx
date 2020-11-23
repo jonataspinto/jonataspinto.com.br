@@ -22,8 +22,18 @@ const Header = () => {
           dataLink.map((link, index) => {
             let iKey = index * 1024;
             return (
-              <S.ListLinksItem key={iKey} current={(typeof window !== 'undefined') && (window.location.pathname === link.url) ? true : false}>
+              <S.ListLinksItem
+                key={iKey}
+                current={
+                  (typeof window !== 'undefined')
+                  && (window.location.pathname === link.url) ? true : false
+                }
+              >
                 <S.LinkItem
+                  cover
+                  direction="top"
+                  bg="#0c0c0c"
+                  duration={0.7}
                   to={link.url}
                   activeClassName="active"
                 >
@@ -40,8 +50,18 @@ const Header = () => {
           dataLink.map((link, index) => {
             let iKey = index * 1024;
             return (
-              <S.ListItem key={iKey} isOpen={isComponentVisible} onClick={() => setIsComponentVisible(!isComponentVisible)}>
-                <S.LinkItem to={link.url} activeClassName="active">
+              <S.ListItem
+                key={iKey}
+                isOpen={isComponentVisible}
+                onClick={() => setIsComponentVisible(!isComponentVisible)}>
+                <S.LinkItem
+                  cover
+                  direction="top"
+                  bg="#0c0c0c"
+                  duration={0.7}
+                  to={link.url}
+                  activeClassName="active"
+                >
                   {link.label}
                 </S.LinkItem>
               </S.ListItem>
@@ -54,4 +74,3 @@ const Header = () => {
 }
 
 export default Header
-

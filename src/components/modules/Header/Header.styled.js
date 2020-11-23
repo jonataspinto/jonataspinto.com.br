@@ -1,22 +1,17 @@
 import styled from "styled-components";
-import { Link } from "gatsby";
-import { lighten } from 'polished'
+import AniLink from "gatsby-plugin-transition-link/AniLink";
+import { lighten, shade } from 'polished'
 import media from "styled-media-query";
 
 export const Header = styled.header`
   height: 100px;
   width: 100%;
-  max-width: 100%;
-  position: relative;
   z-index: 4;
   padding: 10px 180px ;
-  background-image: linear-gradient(#26647A, #000);
-
-    position: sticky;
-    top: 0;
+  background-color: ${shade(0.3, '#26647A')};
+  position: fixed;
   ${media.lessThan("medium")`
     height: 100px;
-    margin-bottom: 10px;
     padding: 0px ;
   `}
   ${media.lessThan("small")`
@@ -45,7 +40,6 @@ export const ListLinks = styled.div`
   z-index: 2;
 
   ${media.lessThan("medium")`
-    background-image: linear-gradient(#26647A, #000);
     justify-content: space-between;
     padding: 10px;
   `}
@@ -73,7 +67,7 @@ export const ListMobile = styled.ul`
   width: 100%;
   position: absolute;
   height: 40px;
-  background-color: #000;
+  background-color: ${shade(0.3, '#26647A')};
   z-index: 1;
   transition: .2s;
   ${media.lessThan("medium")`
@@ -101,7 +95,7 @@ export const ListItem = styled.li`
   `}
 `;
 
-export const LinkItem = styled(Link)`
+export const LinkItem = styled(AniLink)`
   color: #f2f2f2;
   font-size: 1.3rem;
   text-transform: uppercase;
