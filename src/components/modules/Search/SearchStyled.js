@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import media from "styled-media-query"
+import media from "styled-media-query";
+import { Algolia } from 'styled-icons/fa-brands'
 
 export const SearchWrapper = styled.section`
   display: flex;
@@ -60,4 +61,17 @@ export const SearchWrapper = styled.section`
   .ais-SearchBox-reset {
     display: none;
   }
+`;
+
+export const AlgoliaIcon = styled(Algolia)`
+  width: 1rem;
+  margin-left: 8px;
+`
+
+export const Title = styled.p`
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: #fcfcfc;
 `

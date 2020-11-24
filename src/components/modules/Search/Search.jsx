@@ -34,6 +34,10 @@ function Search() {
         />
         <Hits hitComponent={HitComponent}/>
       </InstantSearch>
+      <S.Title>
+        Powered by Algolia
+        <S.AlgoliaIcon />
+      </S.Title>
     </S.SearchWrapper>
   )
 };
