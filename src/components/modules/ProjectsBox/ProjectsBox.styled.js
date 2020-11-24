@@ -12,7 +12,6 @@ export const BoxContainer = styled.div`
 export const ProjectsBoxWrapper = styled.div`
   position: relative;
   margin-bottom: 66px;
-
 `;
 
 export const ProjectBox = styled.a`

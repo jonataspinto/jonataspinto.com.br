@@ -6,6 +6,6 @@ export const Image = styled(Img)`
   border-radius: 50%;
   width: 80px;
   ${media.greaterThan("small")`
-    width: 164px;
+    width: 120px;
   `}
 `;

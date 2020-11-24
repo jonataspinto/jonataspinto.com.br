@@ -27,7 +27,7 @@ function Avatar() {
       <S.Avatar fluid={fluid} />
       <S.Description>
         <h2>Jonatas Pinto</h2>
-        <p>Desenvolvedor Front-end | B2W digital</p>
+        <p>Desenvolvedor Front-end</p>
       </S.Description>
     </S.AvatarWrapper>
   )

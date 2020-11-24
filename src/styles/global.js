@@ -7,6 +7,14 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     scroll-behavior: smooth;
   }
+  html {
+    min-height: 100vh;
+  }
+
+  #root, html, body {
+    height: 100%;
+    width: 100%;
+  }
   body {
     background-color: #000;
     color: #fff;
@@ -22,16 +30,6 @@ const GlobalStyles = createGlobalStyle`
     --white: #fff;
     --black: #222;
   }
-
-  html {
-    min-height: 100vh;
-  }
-
-  #root, html, body {
-    height: 100%;
-    width: 100%;
-  }
-
   ul, ol {
     list-style: none;
   }
