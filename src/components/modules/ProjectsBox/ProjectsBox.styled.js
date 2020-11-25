@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { Settings } from "@styled-icons/feather/Settings";
-import media from "styled-media-query";
+import styled from 'styled-components';
+import { Settings } from '@styled-icons/feather/Settings';
+import media from 'styled-media-query';
 
 export const BoxContainer = styled.div`
   display: flex;
@@ -21,7 +21,7 @@ export const ProjectBox = styled.a`
   font-weight: 500;
   font-size: 20px;
   padding: 20px;
-  ${media.lessThan("small")`
+  ${media.lessThan('small')`
     flex-direction: column;
   `}
 
@@ -52,7 +52,7 @@ export const ProjectBoxDescription = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  ${media.greaterThan("small")`
+  ${media.greaterThan('small')`
     margin-left: 26px;
     align-items: flex-start;
   `}
@@ -70,7 +70,7 @@ export const ToolsIcon = styled(Settings)`
 
 export const StacksName = styled.span`
   color: #BDBDBD;
-  ${media.lessThan("small")`
+  ${media.lessThan('small')`
     font-size: 14px
   `}
 `;

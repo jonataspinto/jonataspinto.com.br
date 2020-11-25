@@ -1,8 +1,8 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import * as S from "./userArt.styled";
+import * as S from './userArt.styled';
 
-function UserArt() {
+const UserArt = () => {
   const data = useStaticQuery(
     graphql`
       query {
@@ -14,14 +14,14 @@ function UserArt() {
           }
         }
       }
-    `
-  )
+    `,
+  );
   return (
     <S.Wrapper>
       <S.Image fluid={data.placeholderImage.childImageSharp.fluid} style={{ }} />
     </S.Wrapper>
 
-  )
-}
+  );
+};
 
-export default UserArt
+export default UserArt;

@@ -1,7 +1,7 @@
-import React from "react";
-import { graphql } from "gatsby";
-import { Layout, PostItem } from "../index";
-import { SEO, Pagination } from "../../features";
+import React from 'react';
+import { graphql } from 'gatsby';
+import { Layout, PostItem } from '../index';
+import { SEO, Pagination } from '../../features';
 
 const BlogListTemplate = (props) => {
   const postList = props.data.allMarkdownRemark.edges;
@@ -20,8 +20,11 @@ const BlogListTemplate = (props) => {
     <Layout>
       <SEO title="Blog" />
       {
-        postList.map(({ node: { fields, frontmatter, timeToRead, id } }) => {
-          return(
+        postList.map(({
+          node: {
+            fields, frontmatter, timeToRead, id,
+          },
+        }) => (
           <PostItem
             key={id}
             slug={fields.slug}
@@ -32,7 +35,7 @@ const BlogListTemplate = (props) => {
             date={frontmatter.date}
             timeToRead={timeToRead}
           />
-        )})
+        ))
       }
       {/* <div> */}
 

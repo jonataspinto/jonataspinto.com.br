@@ -1,6 +1,7 @@
 import React from 'react';
-import * as S from './ProjectImage.styled.js';
 import { useStaticQuery, graphql } from 'gatsby';
+import PropTypes from 'prop-types';
+import * as S from './ProjectImageStyled';
 
 const ProjectImage = ({ name }) => {
   const data = useStaticQuery(
@@ -35,12 +36,16 @@ const ProjectImage = ({ name }) => {
           }
         }
       }
-    `
-  )
+    `,
+  );
 
   return (
     <S.Image fluid={data[name].childImageSharp.fluid} />
-  )
-}
+  );
+};
 
-export default ProjectImage
+ProjectImage.propTypes = {
+  name: PropTypes.string.isRequired,
+};
+
+export default ProjectImage;

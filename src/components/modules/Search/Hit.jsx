@@ -1,5 +1,6 @@
-import React from 'react'
-import { PostItem } from '../PostItem'
+import React from 'react';
+import { number, shape, string } from 'prop-types';
+import { PostItem } from '../PostItem';
 
 const HitComponent = ({ hit }) => (
   <PostItem
@@ -10,6 +11,19 @@ const HitComponent = ({ hit }) => (
     slug={hit.fields.slug}
     timeToRead={hit.timeToRead}
   />
-)
+);
 
-export default HitComponent
+HitComponent.propTypes = {
+  hit: shape({
+    category: string,
+    excerpt: string,
+    title: string,
+    date: string,
+    fields: shape({
+      slug: string,
+    }),
+    timeToRead: number,
+  }).isRequired,
+};
+
+export default HitComponent;

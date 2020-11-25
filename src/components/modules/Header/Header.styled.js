@@ -1,7 +1,7 @@
-import styled from "styled-components";
-import AniLink from "gatsby-plugin-transition-link/AniLink";
-import media from "styled-media-query";
-import { lighten, shade } from 'polished'
+import styled from 'styled-components';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
+import media from 'styled-media-query';
+import { lighten, shade } from 'polished';
 
 export const Header = styled.header`
   display: flex;
@@ -13,7 +13,7 @@ export const Header = styled.header`
   padding: 0px 16px ;
   background-color: ${shade(0.3, '#26647A')};
   position: fixed;
-  ${media.lessThan("medium")`
+  ${media.lessThan('medium')`
     justify-content: space-between;
   `}
 `;
@@ -24,7 +24,7 @@ export const ListLinks = styled.ul`
   align-items: center;
   position: relative;
   z-index: 2;
-  ${media.lessThan("medium")`
+  ${media.lessThan('medium')`
     display: none;
   `}
 `;
@@ -62,7 +62,7 @@ export const MenuButton = styled.button`
   &:active {
     background-color: ${shade(0.6, '#26647A')};
   }
-  ${media.greaterThan("medium")`
+  ${media.greaterThan('medium')`
     display: none;
   `}
 `;
@@ -78,11 +78,11 @@ export const ListMobile = styled.ul`
   left: 0;
   z-index: 1;
   transition: .2s;
-  ${media.lessThan("medium")`
-    top: ${(props) => props.isOpen ? '80px' : '40px'};
-    display: ${(props) => !props.isOpen  && 'none'};
+  ${media.lessThan('medium')`
+    top: ${(props) => (props.isOpen ? '80px' : '40px')};
+    display: ${(props) => !props.isOpen && 'none'};
   `}
-  ${media.greaterThan("medium")`
+  ${media.greaterThan('medium')`
     display: none;
   `}
 `;

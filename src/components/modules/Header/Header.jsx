@@ -1,11 +1,11 @@
 import React from 'react';
-import { Menu } from '@styled-icons/feather/Menu'
+import { Menu } from '@styled-icons/feather/Menu';
 import { SearchAlt } from 'styled-icons/boxicons-regular';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import dataLink from '../../../__mock__/_mock-links';
 import { Avatar } from '../../elements';
-import { useComponentVisible } from '../../../utils'
+import { useComponentVisible } from '../../../utils';
 import * as S from './Header.styled';
-import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 const Header = () => {
   const { ref, isComponentVisible, setIsComponentVisible } = useComponentVisible(false);
@@ -24,7 +24,7 @@ const Header = () => {
       <S.ListLinks>
         {
           dataLink.map((link, index) => {
-            let iKey = index * 1024;
+            const iKey = index * 1024;
             return (
               <S.ListLinksItem
                 key={iKey}
@@ -40,7 +40,7 @@ const Header = () => {
                   {link.label}
                 </S.LinkItem>
               </S.ListLinksItem>
-            )
+            );
           })
         }
         <S.ListLinksItem>
@@ -58,21 +58,22 @@ const Header = () => {
       </S.ListLinks>
 
       <S.MenuButton
-        onClick={()=> setIsComponentVisible(!isComponentVisible)}
+        onClick={() => setIsComponentVisible(!isComponentVisible)}
         arial-label="botao menu"
       >
-        <Menu/>
+        <Menu />
       </S.MenuButton>
 
       <S.ListMobile isOpen={isComponentVisible}>
         {
           dataLink.map((link, index) => {
-            let iKey = index * 1024;
+            const iKey = index * 1024;
             return (
               <S.ListItem
                 key={iKey}
                 isOpen={isComponentVisible}
-                onClick={() => setIsComponentVisible(!isComponentVisible)}>
+                onClick={() => setIsComponentVisible(!isComponentVisible)}
+              >
                 <S.LinkItem
                   cover
                   direction="top"
@@ -84,12 +85,12 @@ const Header = () => {
                   {link.label}
                 </S.LinkItem>
               </S.ListItem>
-            )
+            );
           })
         }
       </S.ListMobile>
     </S.Header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

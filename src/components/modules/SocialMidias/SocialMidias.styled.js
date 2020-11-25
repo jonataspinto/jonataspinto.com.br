@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import media from "styled-media-query";
-import { tint } from "polished";
+import styled from 'styled-components';
+import media from 'styled-media-query';
+import { tint } from 'polished';
 
 export const SocialMidiasBox = styled.div`
   width: 40px;
@@ -9,7 +9,7 @@ export const SocialMidiasBox = styled.div`
   bottom: 60px;
   display: block;
   z-index: 3;
-  ${media.lessThan("medium")`
+  ${media.lessThan('medium')`
     position: fixed;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -29,7 +29,7 @@ export const LinkToSocialPage = styled.a`
   padding: 5px;
   max-width: 50px;
   margin: 0 auto;
-  ${media.lessThan("medium")`
+  ${media.lessThan('medium')`
     max-width: 35px;
   `}
 

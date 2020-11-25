@@ -1,7 +1,7 @@
-import LogoDevs from '../../../images/logo-devs.svg'
+import LogoDevs from '../../../images/logo-devs.svg';
 
 const Images = {
-  LogoDevs
-}
+  LogoDevs,
+};
 
 export default Images;

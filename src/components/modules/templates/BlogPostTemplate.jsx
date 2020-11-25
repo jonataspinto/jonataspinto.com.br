@@ -1,9 +1,9 @@
-import React from "react";
-import { graphql } from "gatsby";
-import { Layout } from "../Layout";
-import { Comments, RecommendedPosts, SEO } from "../../features";
+import React from 'react';
+import { graphql } from 'gatsby';
+import { Layout } from '../Layout';
+import { Comments, RecommendedPosts, SEO } from '../../features';
 
-import * as S from "./PostStyled"
+import * as S from './PostStyled';
 
 const BlogPostTemplate = ({ data, pageContext }) => {
   const post = data.markdownRemark;
@@ -13,7 +13,13 @@ const BlogPostTemplate = ({ data, pageContext }) => {
       <SEO title={post.frontmatter.title} />
       <S.PostHeader>
         <S.PostDate>
-          {post.frontmatter.date} • {post.timeToRead} min de leitura.
+          {post.frontmatter.date}
+          {' '}
+          •
+          {' '}
+          {post.timeToRead}
+          {' '}
+          min de leitura.
         </S.PostDate>
         <S.PostTitle>
           {post.frontmatter.title}
@@ -23,7 +29,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
         </S.PostDescription>
       </S.PostHeader>
       <S.MainContent>
-        <div dangerouslySetInnerHTML={{__html: post.html}}></div>
+        <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </S.MainContent>
       <RecommendedPosts
         next={pageContext.nextPost}

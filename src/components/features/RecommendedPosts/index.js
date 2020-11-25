@@ -1,1 +1,1 @@
-export { default as RecommendedPosts } from "./RecommendedPosts.jsx";
+export { default as RecommendedPosts } from './RecommendedPosts';

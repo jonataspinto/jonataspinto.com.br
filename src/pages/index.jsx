@@ -1,9 +1,8 @@
-import React from "react"
-import { useStaticQuery, graphql } from 'gatsby'
-import { Layout, PostItem } from "../components/modules"
+import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import { Layout, PostItem } from '../components/modules';
 
 const IndexPage = () => {
-
   const { allMarkdownRemark } = useStaticQuery(graphql`
     query PostList {
       allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}) {
@@ -25,14 +24,18 @@ const IndexPage = () => {
         }
       }
     }
-  `)
+  `);
 
   const postList = allMarkdownRemark.edges;
 
   return (
-  <Layout>
-    {
-      postList.map(({ node: { fields, frontmatter, timeToRead, id } }) => (
+    <Layout>
+      {
+      postList.map(({
+        node: {
+          fields, frontmatter, timeToRead, id,
+        },
+      }) => (
         <PostItem
           key={id}
           slug={fields.slug}
@@ -45,7 +48,8 @@ const IndexPage = () => {
         />
       ))
     }
-  </Layout>
-)}
+    </Layout>
+  );
+};
 
-export default IndexPage
+export default IndexPage;

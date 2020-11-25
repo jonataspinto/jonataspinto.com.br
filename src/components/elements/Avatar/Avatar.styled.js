@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import Img from "gatsby-image";
+import styled from 'styled-components';
+import Img from 'gatsby-image';
 
 export const AvatarWrapper = styled.div`
   display: flex;
@@ -7,8 +7,8 @@ export const AvatarWrapper = styled.div`
 `;
 
 export const Avatar = styled(Img).attrs({
-  alt: "Jonatas Pinto",
-  "arial-label": "Jonatas Pinto",
+  alt: 'Jonatas Pinto',
+  'arial-label': 'Jonatas Pinto',
 })`
   border-radius: 50%;
   width: 60px;

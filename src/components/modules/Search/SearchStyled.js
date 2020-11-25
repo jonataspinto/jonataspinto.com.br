@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import media from "styled-media-query";
-import { Algolia } from 'styled-icons/fa-brands'
+import media from 'styled-media-query';
+import { Algolia } from 'styled-icons/fa-brands';
 
 export const SearchWrapper = styled.section`
   display: flex;
@@ -16,13 +16,13 @@ export const SearchWrapper = styled.section`
   .ais-SearchBox,
   .ais-Stats {
     padding: 0.5rem 3rem;
-    ${media.lessThan("large")`
+    ${media.lessThan('large')`
       padding: 0.5rem 1rem;
     `}
   }
   .ais-SearchBox {
     padding-top: 6rem;
-    ${media.lessThan("large")`
+    ${media.lessThan('large')`
       padding-top: 1rem;
     `}
   }
@@ -66,7 +66,7 @@ export const SearchWrapper = styled.section`
 export const AlgoliaIcon = styled(Algolia)`
   width: 1rem;
   margin-left: 8px;
-`
+`;
 
 export const Title = styled.p`
   font-size: 0.8rem;
@@ -74,4 +74,4 @@ export const Title = styled.p`
   justify-content: flex-end;
   align-items: center;
   color: #fcfcfc;
-`
+`;

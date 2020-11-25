@@ -1,14 +1,14 @@
 import React from 'react';
-import * as S from './Avatar.styled';
 import { useStaticQuery, graphql } from 'gatsby';
+import * as S from './Avatar.styled';
 
-function Avatar() {
+const Avatar = () => {
   const {
     placeholderImage: {
       childImageSharp: {
-        fluid
-      }
-    }
+        fluid,
+      },
+    },
   } = useStaticQuery(
     graphql`
       query {
@@ -20,8 +20,8 @@ function Avatar() {
           }
         }
       }
-    `
-  )
+    `,
+  );
   return (
     <S.AvatarWrapper>
       <S.Avatar fluid={fluid} />
@@ -30,7 +30,7 @@ function Avatar() {
         <p>Desenvolvedor Front-end</p>
       </S.Description>
     </S.AvatarWrapper>
-  )
-}
+  );
+};
 
-export default Avatar
+export default Avatar;

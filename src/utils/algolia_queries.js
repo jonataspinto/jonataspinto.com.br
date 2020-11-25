@@ -20,22 +20,22 @@ const postsQuery = `{
       }
     }
   }
-}`
+}`;
 
 const mapData = (data) => data.map(({ node: { frontmatter, ...rest } }) => ({
   ...frontmatter,
   date_timestamp: parseInt(
-    (new Date(frontmatter.date_timestamp) /1000).toFixed(0)
+    (new Date(frontmatter.date_timestamp) / 1000).toFixed(0),
   ),
-  ...rest
-}))
+  ...rest,
+}));
 
 const queries = [
   {
     query: postsQuery,
     transformer: ({ data }) => mapData(data.posts.edges), // optional
     indexName: 'posts', // overrides main index name, optional
-    settings: { attributesToSnippet: [`excerpt:20`] }
+    settings: { attributesToSnippet: ['excerpt:20'] },
   },
 ];
 

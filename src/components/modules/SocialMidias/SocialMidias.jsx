@@ -4,16 +4,16 @@ import { SocialMock } from '../../../__mock__';
 
 const SocialMidias = () => (
   <S.SocialMidiasBox>
-    {SocialMock.map(({key, url, icon}) => (
+    {SocialMock.map(({ key, url, icon }) => (
       <S.IconWrapper key={key}>
-          <S.LinkToSocialPage
-            href={url}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={`ir para ${key}`}
-          >
-            {icon}
-          </S.LinkToSocialPage>
+        <S.LinkToSocialPage
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`ir para ${key}`}
+        >
+          {icon}
+        </S.LinkToSocialPage>
       </S.IconWrapper>
     ))}
   </S.SocialMidiasBox>

@@ -1,10 +1,10 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Disqus } from 'gatsby-plugin-disqus'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Disqus } from 'gatsby-plugin-disqus';
 import * as S from './CommentsStyled';
 
-function Comments({ url, title }) {
-  const completeUrl = `https://jonataspinto.com.br/${url}`
+const Comments = ({ url, title }) => {
+  const completeUrl = `https://jonataspinto.com.br/${url}`;
 
   return (
     <S.CommentsWrapper>
@@ -12,18 +12,17 @@ function Comments({ url, title }) {
       <Disqus
         config={{
           identifier: completeUrl,
-          title: title,
-          url: completeUrl
-        }}        
-      />      
+          title,
+          url: completeUrl,
+        }}
+      />
     </S.CommentsWrapper>
-  )
-}
+  );
+};
 
 Comments.propTypes = {
   url: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-}
+};
 
-export default Comments
-
+export default Comments;

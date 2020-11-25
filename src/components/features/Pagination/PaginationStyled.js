@@ -1,6 +1,6 @@
-import { lighten } from "polished";
-import styled from "styled-components";
-import media from "styled-media-query";
+import { lighten } from 'polished';
+import styled from 'styled-components';
+import media from 'styled-media-query';
 
 export const PaginationWrapper = styled.div`
   display: grid;
@@ -11,7 +11,7 @@ export const PaginationWrapper = styled.div`
   align-items: center;
   padding: 32px 64px;
   color: #f2f2f2;
-  ${media.lessThan("medium")`
+  ${media.lessThan('medium')`
     padding: 32px 0px;
   `}
 

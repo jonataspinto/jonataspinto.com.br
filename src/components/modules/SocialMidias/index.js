@@ -1,1 +1,1 @@
-export { default as SocialMidias} from './SocialMidias';
+export { default as SocialMidias } from './SocialMidias';
