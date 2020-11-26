@@ -2,9 +2,6 @@ import styled from 'styled-components';
 
 export const PostHeader = styled.header`
   color: var(--postColor);
-  /* margin: auto; */
-  max-width: 70rem;
-  /* padding: 5rem 5rem 0; */
 `;
 
 export const PostTitle = styled.h1`
@@ -27,9 +24,6 @@ export const PostDate = styled.p`
 `;
 
 export const MainContent = styled.section`
-  margin: auto;
-  /* max-width: 70rem; */
-  /* padding: 2rem 5rem; */
   p,
   h1,
   h2,
@@ -142,6 +136,9 @@ export const MainContent = styled.section`
   }
   .gatsby-highlight {
     padding: 0 1.6rem 1.6rem;
+  }
+  .gatsby-highlight pre[class*="language-"] {
+    padding: 0;
   }
   .instagram-media {
     margin: 1rem auto !important;
