@@ -2,7 +2,7 @@ backend:
   name: github
   repo: jonataspinto/jonataspinto.com.br
   branch: develop
-  site_domain: jonataspinto.com.br
+  site_domain: compassionate-pike-c6742e.netlify.app
 
 
 publish_mode: editorial_workflow
