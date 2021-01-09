@@ -2,12 +2,16 @@ backend:
   name: github
   repo: jonataspinto/jonataspinto.com.br
   branch: develop
-  site_domain: compassionate-pike-c6742e.netlify.app
+  site_domain: jonataspinto.netlify.app
 
 
 publish_mode: editorial_workflow
 media_folder: "static/assets/img"
 public_folder: "/assets/img"
+
+slug:
+  encoding: 'ascii'
+  clean_accents: true
 
 collections:
   - name: "posts"
