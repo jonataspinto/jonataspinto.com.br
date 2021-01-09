@@ -4,6 +4,7 @@ title: REST API com Express e Firebase cloud-functions.
 description: Construindo apis com firebase functions.
 category: FullStack
 background: "#7AAB13"
+image: /assets/img/express-firebase.png
 ---
 
 ![imagem logos nodejs e firebase](/assets/img/express-firebase.png)

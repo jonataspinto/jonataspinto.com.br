@@ -1,23 +1,23 @@
 const path = require('path');
 
-const { createFilePath } = require(`gatsby-source-filesystem`);
+const { createFilePath } = require('gatsby-source-filesystem');
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
-  const { createNodeField } = actions
-  if (node.internal.type === "MarkdownRemark") {
+  const { createNodeField } = actions;
+  if (node.internal.type === 'MarkdownRemark') {
     const slug = createFilePath({
       node,
       getNode,
-      basePath: `blog`,
-    })
+      basePath: 'blog',
+    });
 
     createNodeField({
       node,
-      name: `slug`,
+      name: 'slug',
       value: `/blog/${slug.slice(12)}`,
-    })
+    });
   }
-}
+};
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
@@ -40,6 +40,9 @@ exports.createPages = ({ graphql, actions }) => {
               description
               title
               date(locale: "pt-br", formatString: "D MMM[,] YYYY")
+              image{
+                publicURL
+              }
             }
             fields {
               slug
@@ -76,13 +79,13 @@ exports.createPages = ({ graphql, actions }) => {
         context: {
           slug: node.fields.slug,
           previousPost: next,
-          nextPost: previous
+          nextPost: previous,
         },
-      })
-    })
+      });
+    });
 
     const postsPerPage = 8;
-    const numPages = Math.ceil(posts.length / postsPerPage)
+    const numPages = Math.ceil(posts.length / postsPerPage);
 
     Array.from({ length: numPages }).forEach((_, index) => {
       createPage({
@@ -92,10 +95,9 @@ exports.createPages = ({ graphql, actions }) => {
           limit: postsPerPage,
           skip: index * postsPerPage,
           numPages,
-          currentPage: index + 1
+          currentPage: index + 1,
         },
-      })
-    })
-  })
-
-}
+      });
+    });
+  });
+};
