@@ -2,8 +2,11 @@ import styled from 'styled-components';
 import media from 'styled-media-query';
 
 export const Wrapper = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
   ${media.lessThan('medium')`
-    padding: 0 18px;
+    padding: 0 18px 35px;
   `}
 `;
 

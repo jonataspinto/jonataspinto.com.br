@@ -48,9 +48,6 @@ export const LinkToSocialPage = styled.a`
 
   &:hover {
     color: #26647A;
-    &:before {
-      transform: scaleX(1)
-    }
   }
 `;
 

@@ -6,6 +6,7 @@ import { PriceTag } from '@styled-icons/entypo/PriceTag';
 export const PostItemBoxWrapper = styled.div`
   position: relative;
   width: 100%;
+  max-width: 590px;
 `;
 
 export const PostItemBox = styled(AniLink)`

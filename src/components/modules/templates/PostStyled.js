@@ -8,13 +8,13 @@ export const PostTitle = styled.h1`
   font-size: 4rem;
   font-weight: 700;
   padding: 0 1.4rem;
-  margin: 1rem auto;
+  margin: 1.4rem auto;
 `;
 
 export const PostDescription = styled.h2`
   font-size: 2rem;
   font-weight: 200;
-  padding: 0 1.4rem;
+  padding: 0 1.4rem 1rem;
 `;
 
 export const PostDate = styled.p`
@@ -24,6 +24,7 @@ export const PostDate = styled.p`
 `;
 
 export const MainContent = styled.section`
+  padding-top: 1rem;
   p,
   h1,
   h2,

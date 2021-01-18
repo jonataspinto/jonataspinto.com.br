@@ -4,7 +4,7 @@ const queries = require('./src/utils/algolia_queries');
 module.exports = {
   siteMetadata: {
     title: 'Jonatas Pinto',
-    description: 'Web site de jonatas pinto',
+    description: 'Blog de Jonatas Pinto, desenvolvedor Frot-end que adora criar promeças com javascript.',
     position: 'Front-end em B2W | Estartando Devs',
     author: '@jonataspinto',
     aboutAuthor: `
@@ -89,7 +89,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'Jonatas Pinto',
+        name: 'Jonatas Pinto Blog',
         short_name: 'Jonatas Pinto',
         start_url: '/',
         background_color: '#26647A',
