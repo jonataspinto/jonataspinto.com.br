@@ -6,8 +6,9 @@ category: FullStack
 background: "#7AAB13"
 image: /assets/img/express-firebase.png
 ---
+![express + firebase functions](/assets/img/express-firebase.png "imagem express + firebase")
 
-
+\
 Se você trabalha com Front-end e costuma desenvolver aplicações SPA com algum Framework javascript tipo ReactJs, Angular, VueJs… então certamente já teve que integrar com algum banco de dados, e uma das melhores alternativas para tal seria o uso de bancos não relacionais por serem de fácil implementação. uma das alternativas que corresponde ao que precisamos de maneira bem robusta é o Firebase, que nos possibilita usar seus recursos direto na web.
 
 ![exemplo de integração direto na web.](/assets/img/1_n5glhucvzlthnvznm0qf5w.png "exemplo de integração direto na web.")
@@ -90,8 +91,6 @@ app.use(express.json())
 module.exports = app;
 ```
 
-
-
 ```javascript
 const router = require('express');
 const admin = require('firebase-admin');
@@ -139,8 +138,6 @@ routes.get('/users', async (request, response) => {
 
 module.exports = routes;
 ```
-
-
 
 Feito isso basta rodar o projeto no terminal dentro do diretório *functions*.\
 `npm run serve`
