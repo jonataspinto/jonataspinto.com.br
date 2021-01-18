@@ -13,6 +13,8 @@ export const Header = styled.header`
   padding: 0px 16px ;
   background-color: ${shade(0.3, '#26647A')};
   position: fixed;
+  top: 0;
+  left: 0;
   ${media.lessThan('medium')`
     justify-content: space-between;
   `}
