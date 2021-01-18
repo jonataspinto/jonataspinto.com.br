@@ -1,5 +1,5 @@
 ---
-date: 2020-11-18 14:17:00
+date: 2020-10-07 14:17:00
 title: REST API com Express e Firebase cloud-functions.
 description: Construindo apis com firebase functions.
 category: FullStack
@@ -215,7 +215,7 @@ routes.delete('/users/:userId', (request, response) => {
 
 routes.put('/users/:userId', async (request, response) => {
   const { userId } = request.params;
-  
+
   await db.collection(userCollection)
   .doc(userId)
   .set(
