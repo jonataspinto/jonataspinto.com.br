@@ -15,7 +15,7 @@ Se você trabalha com Front-end e costuma desenvolver aplicações SPA com algum
 
 certamente é uma solução muito boa mas começa a ficar ruim quando temos que executar validações, realizar autenticação e etc, pois estaremos lidando com muitas regras de negócio na camada *Front-End*, e se for uma aplicação que tende a escalar, isso começa a se tornar um verdadeiro caos! dentro do *Firebase* temos um recurso chamado *Cloud Function*s que nos permite fazer chamadas *Http* executando um servidor *nodeJS* e para essa demostração usaremos o *express*.
 
-* Primeiramente crie uma conta no \[Firebase](<https://console.firebase.google.com/>) e logo em seguida crie um novo projeto.
+* Primeiramente crie uma conta no [Firebase](<https://console.firebase.google.com/>) e logo em seguida crie um novo projeto.
 * Instale o *firebase-tools* globalmente.\
   `npm install -g firebase-tools`
 * Abra o terminal na pasta do seu projeto e faça login com na sua conta google com a cli do F*irebase*.\
