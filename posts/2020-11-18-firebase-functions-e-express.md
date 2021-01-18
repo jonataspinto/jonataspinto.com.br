@@ -15,7 +15,7 @@ Se você trabalha com Front-end e costuma desenvolver aplicações SPA com algum
 
 certamente é uma solução muito boa mas começa a ficar ruim quando temos que executar validações, realizar autenticação e etc, pois estaremos lidando com muitas regras de negócio na camada *Front-End*, e se for uma aplicação que tende a escalar, isso começa a se tornar um verdadeiro caos! dentro do *Firebase* temos um recurso chamado *Cloud Function*s que nos permite fazer chamadas *Http* executando um servidor *nodeJS* e para essa demostração usaremos o *express*.
 
-* Primeiramente crie uma conta no *F[irebase](https://firebase.google.com/?hl=pt-br&gclid=EAIaIQobChMI5_ulwuGg7AIViInICh0SRwFAEAAYASAAEgIhQPD_BwE)* e logo em seguida crie um novo projeto.
+* Primeiramente crie uma conta no \[Firebase](<https://console.firebase.google.com/>) e logo em seguida crie um novo projeto.
 * Instale o *firebase-tools* globalmente.\
   `npm install -g firebase-tools`
 * Abra o terminal na pasta do seu projeto e faça login com na sua conta google com a cli do F*irebase*.\
@@ -23,15 +23,13 @@ certamente é uma solução muito boa mas começa a ficar ruim quando temos que 
 * Agora basta iniciar seu projeto *functions*.\
   `firebase init functions`
 
-``
-
 ![como já criamos um projeto no console do Firebase, usaremos um projeto existente.](/assets/img/1_-45errszaor29avdrdxpxa.png "Exemplo console firebase-cli")
 
 Selecione o projeto que criou e as opções de desenvolvimento *ex: javascript, typescript, Eslint* e por ultimo se deseja instalar todas as dependências com o gerenciador sugerido pelo *Firebase*. para o exemplo estarei utilizando *javascript, Eslint e npm* como gerenciador.\
 \
-Ao abrir seu projeto no *vscode* ele deve ser mais ou menos assim:\
-\`\``
+Ao abrir seu projeto no *vscode* ele deve ser mais ou menos assim:
 
+```
 functions/
 
   node_modules/
@@ -51,8 +49,9 @@ functions/
   .gitignore
 
   firebase.json
+```
 
-\`\``\
+\
 \
  não entrarei em detalhes sobre sua estrutura mas posso adiantar que se alterarmos o projeto não executa.
 
@@ -60,8 +59,8 @@ Navegue para a pasta *functions*.\
 `cd functions`
 
 Faça a instalação do express para podermos começar a escrever nossa função.\
-`npm install express --save`\
-``\
+`npm install express --save`
+
 No seu index.js adicione o seguinte:
 
 ```javascript
