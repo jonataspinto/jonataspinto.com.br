@@ -1,64 +1,70 @@
-import styled from "styled-components";
-import { Link } from "gatsby";
-import { shade } from 'polished'
-import media from "styled-media-query";
+import styled from 'styled-components';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
+import media from 'styled-media-query';
+import { lighten, shade } from 'polished';
 
 export const Header = styled.header`
-  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 80px;
   width: 100%;
-  max-width: 768px;
-  margin-bottom: 40px;
-  position: relative;
-  z-index: 3;
-  ${media.lessThan("medium")`
-    height: 100px;
-    position: sticky;
-    top: 0;
-    margin-bottom: 10px;
-  `}
-  ${media.lessThan("small")`
-    height: 80px;
+  z-index: 4;
+  padding: 0px 16px ;
+  background-color: ${shade(0.3, '#26647A')};
+  position: fixed;
+  top: 0;
+  left: 0;
+  ${media.lessThan('medium')`
+    justify-content: space-between;
   `}
 `;
 
-export const MenuButton = styled.button`
-  width: 30px;
-  background-color: transparent;
-  color: #dbdbdb;
-  border: none;
-  outline: none;
-  ${media.greaterThan("medium")`
+export const ListLinks = styled.ul`
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  ${media.lessThan('medium')`
     display: none;
   `}
 `;
 
-export const ListLinks = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  margin: 0;
-  position: relative;
-  z-index: 2;
-
-  ${media.lessThan("medium")`
-    justify-content: space-between;
-    background-image: linear-gradient(#26647A, #000);
-    padding: 10px ;
-  `}
-  li{
-    ${media.lessThan("medium")`
-      display: none;
-    `}
+export const ListLinksItem = styled.li`
+  .active {
+    color: ${lighten(0.4, '#26647A')};
+  }
+  & + li {
+    margin-left: 16px;
   }
 `;
 
-export const ListLinksItem = styled.div`
-  color: ${(props) => props.current? '#f2f2f2' : '#26647A'};
-  .active {
-    color: #f2f2f2;
+export const LinkItem = styled(AniLink)`
+  color: #f2f2f2;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  &:hover {
+    color: ${lighten(0.3, '#26647A')};
   }
-  ${media.lessThan("medium")`
+`;
+
+export const MenuButton = styled.button`
+  width: 45px;
+  padding: 8px;
+  background-color: transparent;
+  color: #dbdbdb;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  transition: background .2s ease-in-out;
+  &:hover {
+    background-color: ${shade(0.4, '#26647A')};
+  }
+  &:active {
+    background-color: ${shade(0.6, '#26647A')};
+  }
+  ${media.greaterThan('medium')`
     display: none;
   `}
 `;
@@ -68,45 +74,23 @@ export const ListMobile = styled.ul`
   align-items: center;
   justify-content: space-evenly;
   width: 100%;
-  position: absolute;
   height: 40px;
-  background-color: #000;
+  position: absolute;
+  background-color: ${shade(0.4, '#26647A')};
+  left: 0;
   z-index: 1;
   transition: .2s;
-  ${media.lessThan("medium")`
-    top: ${(props) => props.isOpen ? '100px' : '40px'};
+  ${media.lessThan('medium')`
+    top: ${(props) => (props.isOpen ? '80px' : '40px')};
+    display: ${(props) => !props.isOpen && 'none'};
   `}
-  ${media.lessThan("small")`
-    top: ${(props) => props.isOpen ? '80px' : '40px'};
-    height: 40px;
-  `}
-  ${media.greaterThan("medium")`
+  ${media.greaterThan('medium')`
     display: none;
   `}
 `;
 
 export const ListItem = styled.li`
-  ${media.lessThan("medium")`
-    opacity: ${(props) => props.isOpen ? '1' : '0'};
-    transition: opacity .1s;
-  `}
   .active {
-    color: #f2f2f2;
+    color: ${lighten(0.4, '#26647A')};
   }
-    color: ${(props) => props.current? '#f2f2f2' : '#26647A'};
-  ${media.lessThan("medium")`
-  `}
-`;
-
-export const LinkItem = styled(Link)`
-  color: ${shade(0.8, '#f2f2f2')};
-  font-size: 22px;
-  text-transform: uppercase;
-  &:hover {
-    color: #f2f2f2;
-  }
-  ${media.lessThan("medium")`
-    font-size: 18px;
-    color: #26647A;
-  `}
 `;

@@ -1,37 +1,27 @@
-import styled from "styled-components";
-import Img from "gatsby-image";
-import media from "styled-media-query";
+import styled from 'styled-components';
+import Img from 'gatsby-image';
 
 export const AvatarWrapper = styled.div`
-  ${media.lessThan("medium")`
-    display: flex;
-    align-items: center;
-  `}
-
+  display: flex;
+  align-items: center;
 `;
 
 export const Avatar = styled(Img).attrs({
-  alt: "Jonatas Pinto",
-  "arial-label": "Jonatas Pinto",
+  alt: 'Jonatas Pinto',
+  'arial-label': 'Jonatas Pinto',
 })`
   border-radius: 50%;
-  width: 80px;
+  width: 60px;
   object-fit: cover;
-
-  ${media.lessThan("small")`
-    width: 60px;
-  `}
 `;
 
 export const Description = styled.div`
-  ${media.greaterThan("medium")`
-    display: none;
-  `}
-  margin-left: 10px;
+  margin-left: 16px;
+  color: #f2f2f2;
   h2 {
-    font-size: 20px;
+    font-size: 1.3rem;
   }
   p{
-    font-size: 12px;
+    font-size: 0.8rem;
   }
 `;

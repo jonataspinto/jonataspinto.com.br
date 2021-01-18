@@ -3,17 +3,16 @@ import * as S from './ProjectsBox.styled';
 import { ProjectsMock } from '../../../__mock__';
 import { ProjectImage } from '../../elements';
 
-function ProjectsBox() {
-  return (
-    <S.BoxContainer>
-      {
-        ProjectsMock.map(({
-          id,
-          title,
-          key,
-          link,
-          stack,
-        }) => (
+const ProjectsBox = () => (
+  <S.BoxContainer>
+    {
+      ProjectsMock.map(({
+        id,
+        title,
+        key,
+        link,
+        stack,
+      }) => (
         <S.ProjectsBoxWrapper key={id}>
           <S.ProjectBox
             aria-label={`Ver projeto ${title}`}
@@ -28,17 +27,16 @@ function ProjectsBox() {
                 <S.ToolsIcon />
                 <S.StacksName>
                   {stack.map((stk, index) => (
-                    (index === stack.length -1 ) ? stk : `${stk}, `
+                    (index === stack.length - 1) ? stk : `${stk}, `
                   ))}
                 </S.StacksName>
               </S.BoxStacks>
             </S.ProjectBoxDescription>
           </S.ProjectBox>
         </S.ProjectsBoxWrapper>
-        ))
-      }
-    </S.BoxContainer>
-  )
-}
+      ))
+    }
+  </S.BoxContainer>
+);
 
-export default ProjectsBox
+export default ProjectsBox;
