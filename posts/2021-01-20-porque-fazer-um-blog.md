@@ -17,7 +17,7 @@ Atuando no [Estartando Devs](https://estartandodevs.com.br/) tive que aprender m
 
 ### Desafio :hammer:
 
-![Desafio pedras empilhadas](/assets/img/martin-sanchez-md6e2sv__ia-unsplash-1-.jpg)_Crédito da imagem: [Martin Sanchez](/assets/img/martin-sanchez-md6e2sv__ia-unsplash.jpg)
+![Desafio pedras empilhadas](/assets/img/martin-sanchez-md6e2sv__ia-unsplash.jpg "Desafio pedras empilhadas")
 
 Nós desenvolvedores adoramos desafios e fazer um blog era para mim um desafio gigantesco! e com o passar do tempo acabou sendo o pilar que complementaria os outros pontos.
 
