@@ -2,7 +2,7 @@
 date: 2021-01-19 11:13:25
 title: Porquê fazer um Blog
 description: Motivos que me levaram a querer fazer um blog.
-image: /assets/img/bender.jpg
+image: /assets/img/tim-mossholder-kzcwygxz_j4-unsplash.jpg
 category: Mind Set
 ---
 ### Melhorar Comunicação.
@@ -15,7 +15,7 @@ Em 2020 iniciei minha jornada na B2W digital e em alguns momentos nos meus prime
 
 Atuando no [Estartando Devs](https://estartandodevs.com.br/) tive que aprender muita coisas para ensinar aos alunos e quando escrevia conseguia reter mais sobre o assunto abordado e no fim ficava como fonte de consulta para qualquer dúvida, e ter isso em um local trás uma facilidade enorme no compartilhamento e consulta.
 
-### Desafio :hammer:
+### Desafio 🛠️
 
 ![Desafio pedras empilhadas](/assets/img/martin-sanchez-md6e2sv__ia-unsplash.jpg "Desafio pedras empilhadas")_Crédito da imagem: [Martin Sanchez](https://unsplash.com/@martinsanchez)_
 
