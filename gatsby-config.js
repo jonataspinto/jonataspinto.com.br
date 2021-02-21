@@ -1,6 +1,115 @@
 require('dotenv').config();
 const queries = require('./src/utils/algolia_queries');
 
+const pluginConfig = [
+  'gatsby-plugin-transition-link',
+  'gatsby-plugin-react-helmet',
+  {
+    resolve: 'gatsby-plugin-web-font-loader',
+    options: {
+      google: {
+        families: ['Ubuntu'],
+      },
+    },
+  },
+  {
+    resolve: 'gatsby-source-filesystem',
+    options: {
+      name: 'uploads',
+      path: `${__dirname}/static/assets/img`,
+    },
+  },
+  {
+    resolve: 'gatsby-source-filesystem',
+    options: {
+      name: 'images',
+      path: `${__dirname}/src/images`,
+    },
+  },
+  {
+    resolve: 'gatsby-source-filesystem',
+    options: {
+      name: 'blog',
+      path: `${__dirname}/posts`,
+    },
+  },
+  {
+    resolve: 'gatsby-transformer-remark',
+    options: {
+      plugins: [
+        {
+          resolve: 'gatsby-remark-relative-images',
+          options: {
+            name: 'uploads',
+          },
+        },
+        {
+          resolve: 'gatsby-remark-images',
+          options: {
+            maxWidth: 960,
+            linkImagesToOriginal: false,
+          },
+        },
+        'gatsby-remark-lazy-load',
+        'gatsby-remark-prismjs',
+      ],
+    },
+  },
+  {
+    resolve: 'gatsby-plugin-disqus',
+    options: {
+      shortname: 'jonataspinto',
+    },
+  },
+  'gatsby-transformer-sharp',
+  'gatsby-plugin-sharp',
+  'gatsby-plugin-styled-components',
+  {
+    resolve: 'gatsby-plugin-manifest',
+    options: {
+      name: 'Jonatas Pinto Blog',
+      short_name: 'Jonatas Pinto',
+      start_url: '/',
+      background_color: '#26647A',
+      theme_color: '#26647A',
+      display: 'minimal-ui',
+      icon: 'src/images/profile-peq.png', // This path is relative to the root of the site.
+    },
+  },
+  'gatsby-plugin-sitemap',
+  // this (optional) plugin enables Progressive Web App + Offline functionality
+  // To learn more, visit: https://gatsby.dev/offline
+  'gatsby-plugin-offline',
+  'gatsby-plugin-netlify-cms',
+];
+
+if (process.env.CONTEXT === 'production') {
+  const algolia = {
+    resolve: 'gatsby-plugin-algolia-search',
+    options: {
+      appId: process.env.GATSBY_ALGOLIA_APP_ID,
+      apiKey: process.env.ALGOLIA_API_KEY,
+      indexName: process.env.GATSBY_ALGOLIA_INDEX_NAME,
+      queries,
+      chunkSize: 10000,
+      enablePartialUpdates: true, // default: false
+    },
+  };
+
+  const analytics = {
+    resolve: 'gatsby-plugin-google-analytics',
+    options: {
+      trackingId: process.env.GOOGLE_ANALYTICS_ID,
+      head: true,
+      anonymize: true,
+      respectDNT: true,
+    },
+  };
+
+  pluginConfig.push(algolia);
+  pluginConfig.push(analytics);
+}
+
 module.exports = {
   siteMetadata: {
     title: 'Jonatas Pinto',
@@ -12,96 +121,5 @@ module.exports = {
     `,
     siteUrl: 'https://jonataspinto.com.br',
   },
-  plugins: [
-    'gatsby-plugin-transition-link',
-    'gatsby-plugin-react-helmet',
-    {
-      resolve: 'gatsby-plugin-web-font-loader',
-      options: {
-        google: {
-          families: ['Ubuntu'],
-        },
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'uploads',
-        path: `${__dirname}/static/assets/img`,
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'images',
-        path: `${__dirname}/src/images`,
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'blog',
-        path: `${__dirname}/posts`,
-      },
-    },
-    {
-      resolve: 'gatsby-transformer-remark',
-      options: {
-        plugins: [
-          {
-            resolve: 'gatsby-remark-relative-images',
-            options: {
-              name: 'uploads',
-            },
-          },
-          {
-            resolve: 'gatsby-remark-images',
-            options: {
-              maxWidth: 960,
-              linkImagesToOriginal: false,
-            },
-          },
-          'gatsby-remark-lazy-load',
-          'gatsby-remark-prismjs',
-        ],
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-disqus',
-      options: {
-        shortname: 'jonataspinto',
-      },
-    },
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
-    'gatsby-plugin-styled-components',
-    {
-      resolve: 'gatsby-plugin-algolia-search',
-      options: {
-        appId: process.env.GATSBY_ALGOLIA_APP_ID,
-        apiKey: process.env.ALGOLIA_API_KEY,
-        indexName: process.env.GATSBY_ALGOLIA_INDEX_NAME,
-        queries,
-        chunkSize: 10000,
-        enablePartialUpdates: true, // default: false
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-manifest',
-      options: {
-        name: 'Jonatas Pinto Blog',
-        short_name: 'Jonatas Pinto',
-        start_url: '/',
-        background_color: '#26647A',
-        theme_color: '#26647A',
-        display: 'minimal-ui',
-        icon: 'src/images/profile-peq.png', // This path is relative to the root of the site.
-      },
-    },
-    'gatsby-plugin-sitemap',
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    'gatsby-plugin-offline',
-    'gatsby-plugin-netlify-cms',
-  ],
+  plugins: pluginConfig,
 };
