@@ -12,4 +12,4 @@ This project uses :
 
 For build media queries uses [styled-media-query](https://github.com/morajabi/styled-media-query) with some help from [gatsby-plugin-transition-link](https://www.gatsbyjs.org/packages/gatsby-plugin-transition-link/) for animations and [gatsby-image](https://www.gatsbyjs.org/packages/gatsby-image/) for responsive images.
 
-[Access it](http://www.jonataspinto.com.br/)
+[Access it.](http://www.jonataspinto.com.br/)
