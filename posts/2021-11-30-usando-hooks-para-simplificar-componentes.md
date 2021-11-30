@@ -18,7 +18,7 @@ O que tenho utilizado para melhorar um pouco isso é fazer hooks que implementam
 No exemplo a seguir temos uma página de Autenticação onde tudo que é necessário está sendo implementado no corpo da função contabilizando 98 linhas.
 
 ```jsx
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState, useMemo } from 'react';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { Input } from '../../components';
@@ -31,7 +31,7 @@ export const Login = () => {
     password: '',
   });
 
-  const minimumPasswordLength = 6;
+  const minimumPasswordLength = useMemo(() => 6, []);
 
   const [readyToSend, setReadyToSend] = useState(false);
 
@@ -70,7 +70,7 @@ export const Login = () => {
       return setReadyToSend(false);
     }
     setReadyToSend(true);
-  }, [validateEmail]);
+  }, [validateEmail, minimumPasswordLength]);
 
   useEffect(() => {
     handleValidationForm(credentials);
@@ -121,7 +121,7 @@ export const Login = () => {
 Para melhorar a legibilidade e organização criaremos um arquivo chamado `useLoginPage.js` e colocaremos lá, tudo que não for JSX.
 
 ```javascript
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useState, useMemo } from 'react';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import actions from '../../actions';
@@ -132,7 +132,7 @@ export const useLoginPage = () => {
     password: '',
   });
 
-  const minimumPasswordLength = 6;
+  const minimumPasswordLength = useMemo(() => 6, []);
 
   const [readyToSend, setReadyToSend] = useState(false);
 
@@ -171,7 +171,7 @@ export const useLoginPage = () => {
       return setReadyToSend(false);
     }
     setReadyToSend(true);
-  }, [validateEmail]);
+  }, [validateEmail, minimumPasswordLength]);
 
   useEffect(() => {
     handleValidationForm(credentials);
