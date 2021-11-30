@@ -5,6 +5,7 @@ description: Separando jsx de sua lógica
 image: /assets/img/andrew-keymaster-ln6bumfkns0-unsplash.jpg
 category: Frontend
 ---
-![organization](/assets/img/tim-mossholder-kzcwygxz_j4-unsplash.jpg "organization")*Crédito da imagem: [Andrew Keymaster](https://unsplash.com/@arnidan)*
+
+![organization](/assets/img/andrew-keymaster-ln6bumfkns0-unsplash.jpg "organization")*Crédito da imagem: [Andrew Keymaster](https://unsplash.com/@arnidan)*
 
 nd
