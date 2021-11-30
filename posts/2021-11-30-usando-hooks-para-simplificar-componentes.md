@@ -1,7 +1,7 @@
 ---
 date: 2021-11-30 02:15:11
 title: Usando hooks para simplificar componentes.
-description: Separando jsx de sua lógica
+description: Separando jsx de sua lógica com custom hooks.
 image: /assets/img/andrew-keymaster-ln6bumfkns0-unsplash.jpg
 category: Frontend
 ---
@@ -118,7 +118,7 @@ export const Login = () => {
 };
 ```
 
-Para melhorar a legibilidade e organização criaremos um arquivo chamado `useLoginPage.js` e colocaremos la tudo que não for JSX ->
+Para melhorar a legibilidade e organização criaremos um arquivo chamado `useLoginPage.js` e colocaremos lá, tudo que não for JSX.
 
 ```javascript
 import { useCallback, useEffect, useState } from 'react';
@@ -184,8 +184,8 @@ export const useLoginPage = () => {
     readyToSend,
   };
 };
-
 ``
+
 
 Feito isso, podemos alterar nosso componente para:
 
@@ -244,6 +244,8 @@ const Login = () => {
   );
 };
 ``
+
+
 Agora temos no total, 53 linhas em nosso componente principal e toda implementação de lógica, consumo de serviços, efeitos colaterais está isolada em um hook.
 
 ## Conclusão
