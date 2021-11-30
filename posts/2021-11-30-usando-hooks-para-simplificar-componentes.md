@@ -31,7 +31,7 @@ export const Login = () => {
     password: '',
   });
 
-  const minimumPassworLength = 6;
+  const minimumPasswordLength = 6;
 
   const [readyToSend, setReadyToSend] = useState(false);
 
@@ -66,7 +66,7 @@ export const Login = () => {
     if (!validateEmail(values.email)) {
       return setReadyToSend(false);
     }
-    if ([...values.password].length < minimumPassworLength) {
+    if ([...values.password].length < minimumPasswordLength) {
       return setReadyToSend(false);
     }
     setReadyToSend(true);
@@ -132,7 +132,7 @@ export const useLoginPage = () => {
     password: '',
   });
 
-  const minimumPassworLength = 6;
+  const minimumPasswordLength = 6;
 
   const [readyToSend, setReadyToSend] = useState(false);
 
@@ -167,7 +167,7 @@ export const useLoginPage = () => {
     if (!validateEmail(values.email)) {
       return setReadyToSend(false);
     }
-    if ([...values.password].length < minimumPassworLength) {
+    if ([...values.password].length < minimumPasswordLength) {
       return setReadyToSend(false);
     }
     setReadyToSend(true);
