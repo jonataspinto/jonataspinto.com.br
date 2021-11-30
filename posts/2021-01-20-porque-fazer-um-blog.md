@@ -5,7 +5,7 @@ description: Motivos que me levaram a querer fazer um blog.
 image: /assets/img/tim-mossholder-kzcwygxz_j4-unsplash.jpg
 category: Mind Set
 ---
-![what now](/assets/img/tim-mossholder-kzcwygxz_j4-unsplash.jpg "what now")*Crédito da imagem: [Tim Mossholder](https://unsplash.com/@timmossholder)*
+![what now](/assets/img/andrew-keymaster-ln6bumfkns0-unsplash.jpg "what now")*Crédito da imagem: [Tim Mossholder](https://unsplash.com/@timmossholder)*
 
 ### Melhorar Comunicação 📢
 
