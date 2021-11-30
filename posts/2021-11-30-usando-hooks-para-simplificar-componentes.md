@@ -184,7 +184,7 @@ export const useLoginPage = () => {
     readyToSend,
   };
 };
-``
+```
 
 
 Feito isso, podemos alterar nosso componente para:
@@ -243,7 +243,7 @@ const Login = () => {
     </div>
   );
 };
-``
+```
 
 
 Agora temos no total, 53 linhas em nosso componente principal e toda implementação de lógica, consumo de serviços, efeitos colaterais está isolada em um hook.
