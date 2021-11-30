@@ -208,7 +208,7 @@ const Login = () => {
       <form className="login-container-form" onSubmit={ handleSubmit }>
         <img
           src="brand-logo-full.png"
-          alt="logo trybe completa"
+          alt="logo completa"
           className="login-container-form__brand-logo"
         />
         <Input
