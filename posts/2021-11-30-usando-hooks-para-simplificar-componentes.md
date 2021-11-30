@@ -250,4 +250,4 @@ Agora temos no total, 53 linhas em nosso componente principal e toda implementa�
 
 ## Conclusão
 
-Espero que tenham gostado da dica e se tem algo que viu que pode ser melhorado, não deixe de entrar em contato. :call_me_hand: :rocket: 
+Espero que tenham gostado da dica e se tem algo que viu que pode ser melhorado, não deixe de entrar em contato. ✌🏽 
