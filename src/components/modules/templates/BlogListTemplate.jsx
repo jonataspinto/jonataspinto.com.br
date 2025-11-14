@@ -36,7 +36,7 @@ export const query = graphql`
   }
 `;
 
-const BlogListTemplate = ({ data, pageContext }) => {
+export default function BlogListTemplate({ data, pageContext }) {
   const postList = data.allMarkdownRemark.edges;
 
   const { currentPage, numPages } = pageContext;
@@ -73,7 +73,7 @@ const BlogListTemplate = ({ data, pageContext }) => {
       />
     </Layout>
   );
-};
+}
 
 BlogListTemplate.propTypes = {
   pageContext: shape({
@@ -103,7 +103,5 @@ BlogListTemplate.propTypes = {
     }),
   }).isRequired,
 };
-
-export default BlogListTemplate;
 
 export const Head = () => <SEO title="Blog" />;
