@@ -7,6 +7,8 @@
   "dependencies": {
     "@styled-icons/entypo": "^10.46.0",
     "@styled-icons/feather": "^10.47.0",
+    "@types/node": "^24.10.1",
+    "@types/react": "^19.2.4",
     "algoliasearch": "^4.8.0",
     "babel-plugin-styled-components": "^2.1.4",
     "dotenv": "^8.2.0",
@@ -22,6 +24,7 @@
     "gatsby-plugin-sitemap": "^6.15.0",
     "gatsby-plugin-styled-components": "^6.15.0",
     "gatsby-plugin-transition-link": "^1.20.5",
+    "gatsby-plugin-typescript": "^5.15.0",
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-remark-images": "^7.15.0",
     "gatsby-remark-lazy-load": "^1.0.2",
@@ -42,7 +45,8 @@
     "react-instantsearch-dom": "^6.40.4",
     "styled-components": "^6.1.19",
     "styled-icons": "^10.47.1",
-    "styled-media-query": "^2.1.2"
+    "styled-media-query": "^2.1.2",
+    "typescript": "^5.9.3"
   },
   "devDependencies": {
     "eslint": "^7.14.0",
