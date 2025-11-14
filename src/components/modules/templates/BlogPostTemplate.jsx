@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import { string, number, shape, node } from 'prop-types';
-import { Layout } from '../Layout';
+import { Layout } from '../../Layout';
 import { Comments, RecommendedPosts, SEO } from '../../features';
 
 import * as S from './PostStyled';

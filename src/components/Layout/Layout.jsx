@@ -2,9 +2,9 @@ import React from 'react';
 import { TransitionPortal } from 'gatsby-plugin-transition-link';
 import { node } from 'prop-types';
 import * as S from './Layout.styled';
-import GlobalStyles from '../../../styles/global';
-import Header from '../Header/Header';
-import { SocialMidias } from '../SocialMidias';
+import GlobalStyles from '../../styles/global';
+import Header from '../modules/Header/Header';
+import { SocialMidias } from '../modules/SocialMidias';
 
 const Layout = ({ children }) => (
   <S.Container>
@@ -13,9 +13,7 @@ const Layout = ({ children }) => (
       <Header />
     </TransitionPortal>
 
-    <S.MainContent>
-      {children}
-    </S.MainContent>
+    <S.MainContent>{children}</S.MainContent>
 
     <TransitionPortal>
       <SocialMidias />

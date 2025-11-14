@@ -1,7 +1,8 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import { AboutMeBox, Layout } from '../components/modules';
+import { AboutMeBox } from '../components/modules';
 import { SEO } from '../components/features';
+import { Layout } from '../components';
 
 export default function IndexPage() {
   const {

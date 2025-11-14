@@ -2,7 +2,9 @@ import React from 'react';
 import { graphql } from 'gatsby';
 // eslint-disable-next-line object-curly-newline
 import { string, number, shape, arrayOf } from 'prop-types';
-import { Layout, PostItem } from '../index';
+import { PostItem } from '../index';
+import { Layout } from '../../Layout';
+
 import { SEO, Pagination } from '../../features';
 
 import * as S from './ListPostsStyled';
