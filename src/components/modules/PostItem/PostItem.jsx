@@ -2,13 +2,7 @@ import React from 'react';
 import { string, number } from 'prop-types';
 import * as S from './PostItem.styled';
 
-const PostItem = ({
-  category,
-  title,
-  date,
-  slug,
-  timeToRead,
-}) => (
+const PostItem = ({ category, title, date, slug, timeToRead }) => (
   <S.PostItemBoxWrapper>
     <S.PostItemBox
       cover
@@ -22,13 +16,9 @@ const PostItem = ({
         {title}
         <S.BoxCategory>
           <S.ToolsIcon />
-          <S.PostCategory>
-            {category}
-          </S.PostCategory>
+          <S.PostCategory>{category}</S.PostCategory>
         </S.BoxCategory>
-        <S.PostDate>
-          {`${date} - ${timeToRead} min de leitura`}
-        </S.PostDate>
+        <S.PostDate>{`${date} - ${timeToRead} min de leitura`}</S.PostDate>
       </S.PostDescription>
     </S.PostItemBox>
   </S.PostItemBoxWrapper>

@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@styled-icons/entypo": "^10.46.0",
     "@styled-icons/feather": "^10.47.0",
     "algoliasearch": "^4.8.0",
     "babel-plugin-styled-components": "^2.1.4",

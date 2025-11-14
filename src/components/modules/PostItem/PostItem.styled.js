@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import media from 'styled-media-query';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
-import { PriceTag } from '@styled-icons/entypo/PriceTag';
+import { PriceTag } from '@styled-icons/entypo';
 
 export const PostItemBoxWrapper = styled.div`
   position: relative;
@@ -11,7 +11,7 @@ export const PostItemBoxWrapper = styled.div`
 
 export const PostItemBox = styled(AniLink)`
   display: flex;
-  color: #FCFCFC;
+  color: #fcfcfc;
   font-weight: 500;
   font-size: 20px;
   padding: 20px;
@@ -27,17 +27,17 @@ export const PostItemBox = styled(AniLink)`
     position: absolute;
     right: 0;
     top: 0;
-    transition: transform .2s;
+    transition: transform 0.2s;
   }
 
   &:after {
-    border-bottom: 2px solid #bdbdbd;;
+    border-bottom: 2px solid #bdbdbd;
     transform: scaleX(0);
   }
 
   &:hover {
     &:after {
-      transform: scaleX(1)
+      transform: scaleX(1);
     }
   }
 `;
@@ -56,19 +56,19 @@ export const BoxCategory = styled.div`
 `;
 
 export const ToolsIcon = styled(PriceTag)`
-  color: #BDBDBD;
+  color: #bdbdbd;
   width: 1.5rem;
   margin-right: 5px;
 `;
 
 export const PostCategory = styled.span`
-  color: #BDBDBD;
+  color: #bdbdbd;
   font-size: 1.2rem;
 `;
 
 export const PostDate = styled.span`
   font-size: 0.7rem;
-  color: #BDBDBD;
+  color: #bdbdbd;
   ${media.lessThan('small')`
     font-size: 14px
   `}
