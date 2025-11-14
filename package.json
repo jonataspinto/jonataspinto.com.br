@@ -11,7 +11,7 @@
     "@types/react": "^19.2.4",
     "algoliasearch": "^4.8.0",
     "babel-plugin-styled-components": "^2.1.4",
-    "dotenv": "^8.2.0",
+    "dotenv": "^17.2.3",
     "gatsby": "^5.14.6",
     "gatsby-plugin-algolia-search": "^0.5.7",
     "gatsby-plugin-disqus": "^1.2.6",
