@@ -1,26 +1,16 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import {
-  string,
-  number,
-  shape,
-  arrayOf,
-} from 'prop-types';
-import {
-  Layout,
-  PostItem,
-} from '../index';
-import {
-  SEO,
-  Pagination,
-} from '../../features';
+// eslint-disable-next-line object-curly-newline
+import { string, number, shape, arrayOf } from 'prop-types';
+import { Layout, PostItem } from '../index';
+import { SEO, Pagination } from '../../features';
 
 import * as S from './ListPostsStyled';
 
 export const query = graphql`
-  query PostListBlog ($limit: Int!, $skip: Int!) {
+  query PostListBlog($limit: Int!, $skip: Int!) {
     allMarkdownRemark(
-      sort: {fields: frontmatter___date, order: DESC},
+      sort: { frontmatter: { date: DESC } }
       limit: $limit
       skip: $skip
     ) {
@@ -35,8 +25,8 @@ export const query = graphql`
           }
           fields {
             slug
-          },
-          timeToRead,
+          }
+          timeToRead
           id
         }
       }
@@ -47,38 +37,30 @@ export const query = graphql`
 const BlogListTemplate = ({ data, pageContext }) => {
   const postList = data.allMarkdownRemark.edges;
 
-  const {
-    currentPage,
-    numPages,
-  } = pageContext;
+  const { currentPage, numPages } = pageContext;
 
-  const isFirst = (currentPage === 1);
-  const isLast = (currentPage === numPages);
-  const prevPage = (currentPage - 1 === 1 ? 'blog/' : `blog/page/${currentPage - 1}`);
-  const nextPage = (`/blog/page/${currentPage + 1}`);
+  const isFirst = currentPage === 1;
+  const isLast = currentPage === numPages;
+  const prevPage =
+    currentPage - 1 === 1 ? 'blog/' : `blog/page/${currentPage - 1}`;
+  const nextPage = `/blog/page/${currentPage + 1}`;
 
   return (
     <Layout>
       <SEO title="Blog" />
       <S.ListPosts>
-        {
-          postList.map(({
-            node: {
-              fields, frontmatter, timeToRead, id,
-            },
-          }) => (
-            <PostItem
-              key={id}
-              slug={fields.slug}
-              title={frontmatter.title}
-              background={frontmatter.background}
-              category={frontmatter.category}
-              description={frontmatter.description}
-              date={frontmatter.date}
-              timeToRead={timeToRead}
-            />
-          ))
-        }
+        {postList.map(({ node: { fields, frontmatter, timeToRead, id } }) => (
+          <PostItem
+            key={id}
+            slug={fields.slug}
+            title={frontmatter.title}
+            background={frontmatter.background}
+            category={frontmatter.category}
+            description={frontmatter.description}
+            date={frontmatter.date}
+            timeToRead={timeToRead}
+          />
+        ))}
       </S.ListPosts>
       <Pagination
         isFirst={isFirst}
@@ -99,22 +81,24 @@ BlogListTemplate.propTypes = {
   }).isRequired,
   data: shape({
     allMarkdownRemark: shape({
-      edges: arrayOf(shape({
-        node: shape({
-          fields: shape({
-            slug: string,
+      edges: arrayOf(
+        shape({
+          node: shape({
+            fields: shape({
+              slug: string,
+            }),
+            frontmatter: shape({
+              title: string,
+              background: string,
+              category: string,
+              description: string,
+              date: string,
+            }),
+            timeToRead: number,
+            id: string,
           }),
-          frontmatter: shape({
-            title: string,
-            background: string,
-            category: string,
-            description: string,
-            date: string,
-          }),
-          timeToRead: number,
-          id: string,
-        }),
-      })),
+        })
+      ),
     }),
   }).isRequired,
 };

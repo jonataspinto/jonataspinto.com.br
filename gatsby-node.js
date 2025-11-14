@@ -21,17 +21,16 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
-  const BlogPost = path.resolve('./src/components/modules/templates/BlogPostTemplate.jsx');
-  const BlogList = path.resolve('./src/components/modules/templates/BlogListTemplate.jsx');
+  const BlogPost = path.resolve(
+    './src/components/modules/templates/BlogPostTemplate.jsx'
+  );
+  const BlogList = path.resolve(
+    './src/components/modules/templates/BlogListTemplate.jsx'
+  );
 
   return graphql(`
     {
-      allMarkdownRemark(
-        sort: {
-          fields: frontmatter___date,
-          order: DESC
-        }
-      ) {
+      allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
         edges {
           node {
             frontmatter {
@@ -40,14 +39,14 @@ exports.createPages = ({ graphql, actions }) => {
               description
               title
               date(locale: "pt-br", formatString: "D MMM[,] YYYY")
-              image{
+              image {
                 publicURL
               }
             }
             fields {
               slug
-            },
-            timeToRead,
+            }
+            timeToRead
             id
           }
           next {

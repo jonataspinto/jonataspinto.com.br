@@ -1,19 +1,17 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import { AboutMeBox, Layout, PostItem } from '../components/modules';
+import { AboutMeBox, Layout } from '../components/modules';
 import { SEO } from '../components/features';
 
 const IndexPage = () => {
   const {
     allMarkdownRemark,
     site: {
-      siteMetadata: {
-        aboutAuthor,
-      },
+      siteMetadata: { aboutAuthor },
     },
   } = useStaticQuery(graphql`
     query PostList {
-      allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}) {
+      allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
         edges {
           node {
             frontmatter {
@@ -25,21 +23,22 @@ const IndexPage = () => {
             }
             fields {
               slug
-            },
-            timeToRead,
+            }
+            timeToRead
             id
           }
         }
       }
-      site{
-      siteMetadata{
-        aboutAuthor
+      site {
+        siteMetadata {
+          aboutAuthor
+        }
       }
-    }
     }
   `);
 
   const postList = allMarkdownRemark.edges;
+  console.log('🚀 ~ IndexPage ~ postList:', postList);
 
   return (
     <Layout>
