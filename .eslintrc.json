@@ -3,18 +3,28 @@
     "browser": true,
     "es2020": true
   },
-  "extends": ["plugin:react/recommended", "airbnb"],
+  "extends": [
+    "plugin:react/recommended",
+    "airbnb",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
     },
-    "ecmaVersion": 11,
-    "sourceType": "module"
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "project": "./tsconfig.json"
   },
-  "plugins": ["react"],
+  "plugins": ["react", "@typescript-eslint", "prettier"],
   "rules": {
     "import/prefer-default-export": "off",
     "import/no-unresolved": "off",
-    "comma-dangle": "off" // TODO: Remove this line after update app
+    "prettier/prettier": "error",
+    "react/jsx-filename-extension": [1, { "extensions": [".jsx", ".tsx"] }],
+    "react/react-in-jsx-scope": "off"
   }
 }
