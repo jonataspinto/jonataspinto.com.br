@@ -3,7 +3,6 @@ const queries = require('./src/utils/algolia_queries');
 
 const pluginConfig = [
   'gatsby-plugin-transition-link',
-  'gatsby-plugin-react-helmet',
   {
     resolve: 'gatsby-plugin-web-font-loader',
     options: {
@@ -114,7 +113,8 @@ module.exports = {
   siteMetadata: {
     title: 'Jonatas Pinto',
     description: 'Blog de um amante de tecnologia.',
-    position: 'Front-end em Storm Group - Security and Defense | Estartando Devs',
+    position:
+      'Front-end em Storm Group - Security and Defense | Estartando Devs',
     author: '@jonataspinto',
     aboutAuthor: `
     Olá, me chamo Jonatas Pinto Ferreira, sou do Rio de Janeiro e sou Desevolvedor Front-end. Tenho atuado na área de Tecnologia da Informação desde 2014(inicialmente com manutenção de equipamentos e suporte técnico) e sou formado em Análise e Desenvolvimento de Sistemas pela <a href="https://www.unopar.com.br/" target="_blank" rel="noopener noreferrer" aria-label="UNOPAR">UNOPAR</a>. Participo como instrutor do projeto social <a href="https://estartandodevs.com.br/" target="_blank" rel="noopener noreferrer" aria-label="estartando-devs">Estartando Devs</a> onde possibilitamos que jovens possam conhecer e iniciar o aprendizado nas areas de Desenvolvimento Web e Design UI/UX, Atualmente o projeto vem sendo realizado de modo virtual, o que tem possibilitado alcançar jovens de diferentes lugares, não só do Rio de Janeiro, mas do Brasil.

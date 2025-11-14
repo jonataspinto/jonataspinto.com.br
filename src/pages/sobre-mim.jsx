@@ -6,24 +6,25 @@ import { Layout, AboutMeBox } from '../components/modules';
 const AboutMePage = () => {
   const {
     site: {
-      siteMetadata: {
-        aboutAuthor,
-      },
+      siteMetadata: { aboutAuthor },
     },
-  } = useStaticQuery(graphql`{
-    site{
-      siteMetadata{
-        aboutAuthor
+  } = useStaticQuery(graphql`
+    {
+      site {
+        siteMetadata {
+          aboutAuthor
+        }
       }
     }
-  }`);
+  `);
 
   return (
     <Layout>
-      <SEO title="Sobre mim" />
       <AboutMeBox data={aboutAuthor} />
     </Layout>
   );
 };
 
 export default AboutMePage;
+
+export const Head = () => <SEO title="Sobre mim" />;

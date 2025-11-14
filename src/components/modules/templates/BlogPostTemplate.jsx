@@ -1,23 +1,14 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import {
-  string,
-  number,
-  shape,
-  node,
-} from 'prop-types';
+import { string, number, shape, node } from 'prop-types';
 import { Layout } from '../Layout';
-import {
-  Comments,
-  RecommendedPosts,
-  SEO,
-} from '../../features';
+import { Comments, RecommendedPosts, SEO } from '../../features';
 
 import * as S from './PostStyled';
 
 export const query = graphql`
   query Post($slug: String!) {
-    markdownRemark(fields: {slug: {eq: $slug}}){
+    markdownRemark(fields: { slug: { eq: $slug } }) {
       fields {
         slug
       }
@@ -25,7 +16,7 @@ export const query = graphql`
         title
         description
         date(locale: "pt-br", formatString: "D MMM, YYYY")
-        image{
+        image {
           publicURL
         }
       }
@@ -40,27 +31,12 @@ const BlogPostTemplate = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <SEO
-        title={post.frontmatter.title}
-        description={post.frontmatter.description}
-        image={post.frontmatter.image?.publicURL}
-      />
       <S.PostHeader>
         <S.PostDate>
-          {post.frontmatter.date}
-          {' '}
-          •
-          {' '}
-          {post.timeToRead}
-          {' '}
-          min de leitura.
+          {post.frontmatter.date} • {post.timeToRead} min de leitura.
         </S.PostDate>
-        <S.PostTitle>
-          {post.frontmatter.title}
-        </S.PostTitle>
-        <S.PostDescription>
-          {post.frontmatter.description}
-        </S.PostDescription>
+        <S.PostTitle>{post.frontmatter.title}</S.PostTitle>
+        <S.PostDescription>{post.frontmatter.description}</S.PostDescription>
       </S.PostHeader>
       <S.MainContent>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
@@ -69,10 +45,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
         next={pageContext.nextPost}
         previous={pageContext.previousPost}
       />
-      <Comments
-        url={post.fields.slug}
-        title={post.frontmatter.title}
-      />
+      <Comments url={post.fields.slug} title={post.frontmatter.title} />
     </Layout>
   );
 };
@@ -101,3 +74,15 @@ BlogPostTemplate.propTypes = {
 };
 
 export default BlogPostTemplate;
+
+export const Head = ({ data }) => {
+  const post = data.markdownRemark;
+
+  return (
+    <SEO
+      title={post.frontmatter.title}
+      description={post.frontmatter.description}
+      image={post.frontmatter.image?.publicURL}
+    />
+  );
+};

@@ -47,7 +47,6 @@ const BlogListTemplate = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <SEO title="Blog" />
       <S.ListPosts>
         {postList.map(({ node: { fields, frontmatter, timeToRead, id } }) => (
           <PostItem
@@ -104,3 +103,5 @@ BlogListTemplate.propTypes = {
 };
 
 export default BlogListTemplate;
+
+export const Head = () => <SEO title="Blog" />;

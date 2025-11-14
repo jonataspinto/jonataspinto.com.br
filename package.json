@@ -16,7 +16,6 @@
     "gatsby-plugin-manifest": "^5.15.0",
     "gatsby-plugin-netlify-cms": "^5.15.0",
     "gatsby-plugin-offline": "^3.2.22",
-    "gatsby-plugin-react-helmet": "^6.15.0",
     "gatsby-plugin-sharp": "^5.15.0",
     "gatsby-plugin-sitemap": "^6.15.0",
     "gatsby-plugin-styled-components": "^6.15.0",

@@ -5,9 +5,10 @@ import { SEO } from '../components/features';
 
 const ProjectsPage = () => (
   <Layout>
-    <SEO title="Projetos" />
     <ProjectsBox />
   </Layout>
 );
 
 export default ProjectsPage;
+
+export const Head = () => <SEO title="Projetos" />;

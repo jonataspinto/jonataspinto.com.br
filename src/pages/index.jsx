@@ -42,7 +42,6 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <SEO title="Home" />
       <AboutMeBox data={aboutAuthor} />
       {/* {
       postList.map(({
@@ -67,3 +66,5 @@ const IndexPage = () => {
 };
 
 export default IndexPage;
+
+export const Head = () => <SEO title="Home" />;
