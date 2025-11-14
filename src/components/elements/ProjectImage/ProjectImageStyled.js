@@ -1,8 +1,9 @@
 import styled from 'styled-components';
-import Img from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
+
 import media from 'styled-media-query';
 
-export const Image = styled(Img)`
+export const Image = styled(GatsbyImage)`
   border-radius: 50%;
   width: 80px;
   ${media.greaterThan('small')`

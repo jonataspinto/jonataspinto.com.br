@@ -9,39 +9,45 @@ const ProjectImage = ({ name }) => {
       query {
         estartandodevs: file(relativePath: { eq: "logo-devs.png" }) {
           childImageSharp {
-            fluid(maxWidth: 164, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
+            fluid: gatsbyImageData(
+              layout: CONSTRAINED
+              width: 164
+              quality: 100
+            )
           }
         }
         youpluv: file(relativePath: { eq: "logo-youpluv.png" }) {
           childImageSharp {
-            fluid(maxWidth: 164, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
+            fluid: gatsbyImageData(
+              layout: CONSTRAINED
+              width: 164
+              quality: 100
+            )
           }
         }
         confortoanimal: file(relativePath: { eq: "logo-confortoanimal.png" }) {
           childImageSharp {
-            fluid(maxWidth: 164, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
+            fluid: gatsbyImageData(
+              layout: CONSTRAINED
+              width: 164
+              quality: 100
+            )
           }
         }
         eliowinter: file(relativePath: { eq: "elio-winter.png" }) {
           childImageSharp {
-            fluid(maxWidth: 164, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
+            fluid: gatsbyImageData(
+              layout: CONSTRAINED
+              width: 164
+              quality: 100
+            )
           }
         }
       }
-    `,
+    `
   );
 
-  return (
-    <S.Image fluid={data[name].childImageSharp.fluid} />
-  );
+  return <S.Image image={data[name].childImageSharp.fluid} />;
 };
 
 ProjectImage.propTypes = {

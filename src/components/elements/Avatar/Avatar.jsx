@@ -5,26 +5,27 @@ import * as S from './Avatar.styled';
 const Avatar = () => {
   const {
     placeholderImage: {
-      childImageSharp: {
-        fluid,
-      },
+      childImageSharp: { fluid },
     },
   } = useStaticQuery(
     graphql`
       query {
         placeholderImage: file(relativePath: { eq: "profile.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 100, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
+            fluid: gatsbyImageData(
+              layout: CONSTRAINED
+              width: 100
+              quality: 100
+            )
           }
         }
       }
-    `,
+    `
   );
+
   return (
     <S.AvatarWrapper>
-      <S.Avatar fluid={fluid} />
+      <S.Avatar image={fluid} />
       <S.Description>
         <h2>Jonatas Pinto</h2>
         <p>Desenvolvedor Front-end</p>

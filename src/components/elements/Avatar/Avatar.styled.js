@@ -1,12 +1,12 @@
 import styled from 'styled-components';
-import Img from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 export const AvatarWrapper = styled.div`
   display: flex;
   align-items: center;
 `;
 
-export const Avatar = styled(Img).attrs({
+export const Avatar = styled(GatsbyImage).attrs({
   alt: 'Jonatas Pinto',
   'arial-label': 'Jonatas Pinto',
 })`
@@ -21,7 +21,7 @@ export const Description = styled.div`
   h2 {
     font-size: 1.3rem;
   }
-  p{
+  p {
     font-size: 0.8rem;
   }
 `;
